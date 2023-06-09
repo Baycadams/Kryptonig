@@ -1,0 +1,417 @@
+@import 'footer';
+
+.Hero-section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    padding: 15px;
+}
+.unlocking h3{
+    font-family: var(--font-familyone);
+    font-size: 25px;
+    text-align: center;
+}
+.para{
+    text-align: center;
+    font-family: var(--font-familytwo);
+    line-height: 1.5;
+    margin-top: 10px;
+}
+.cont{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+.join-btn{
+    
+    border: none;
+    background-color:  #0E5BA7;
+    padding: 10px 20px;
+    font-family: var(--font-familytwo);
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+}
+.non-btn{
+    background: none;
+    color: #000;
+    border: 1px solid #F39333;
+}
+.group1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.group1 img{
+    width:100%;
+    height: 300px;
+    object-fit: cover;
+
+}
+
+/*offer*/
+
+.offer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+}
+.offer h3{
+    font-size: 25px;
+    font-family: var(--font-familyone);
+}
+.at{
+    margin-top: 10px;
+    font-family: var(--font-familytwo);
+    text-align: center;
+}
+.boxes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    gap: 40px;
+}
+.box1{
+    width: 90%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 19px 50px 19px;
+    margin-top: 40px;
+    background: #fff;
+    color: #000;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.show{
+    font-family: var(--font-familyone);
+    font-weight: 600;
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+.desc{
+    margin-top: 20px;
+    text-align: center;
+    font-family: var(--font-familytwo);
+}
+
+.illustrator{
+    width: 100%;
+
+    margin-top: 30px;
+}
+.illustrator img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+}
+/*** Projects**/
+
+.projects{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.projects h3{
+    font-family: var(--font-familyone);
+    font-size: 20px;
+}
+.project-slides{
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.project1{
+    min-width:250px;
+    height:400px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: #0E5BA7;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.project-img{
+    width: 100%;
+    height: 200px;
+}
+.project-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ret{
+    color: #fff;
+    font-family: var(--font-familyone);
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+}
+.hold{
+    width: 100%;
+    padding: 0 10px;
+}
+.ips{
+    font-family: var(--font-familytwo);
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.play{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+.play h3{
+    font-family: var(--font-familyone);
+    font-size: 25px;
+}
+.you{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.you iframe{
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+.dots{
+    margin-top: 20px;
+    display: flex;
+
+}
+.dot{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #F39333;
+    margin: 10px;
+}
+.more{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0E5BA7;
+    padding: 40px;
+}
+.more h3{
+    font-family: var(--font-familyone);
+    font-size: 20px;
+    color: #fff;
+}
+.more p{
+    text-align: center;
+    font-family: var(--font-familytwo);
+    color: #fff;
+    margin-top: 10px;
+    font-size: 12px;
+}
+.email{
+    margin-top: 10px;
+
+}
+.email input{
+    width: 300px;
+    padding: 11px 0;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    position: relative;
+}
+
+.email input::placeholder{
+    padding: 0px 30px;
+    font-family: var(--font-familytwo);
+    font-size: 15px;
+    color: #000;
+}
+.email button{
+    position: absolute;
+    margin-left: -95px;
+    margin-top: 4px;
+    padding: 6px 20px;
+    border-radius: 50px;
+    border: none;
+    background: #F39333;
+    color: #fff;
+    font-family: var(--font-familyone);
+    font-weight: 400;
+    cursor: pointer;
+
+}
+.logos{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.logos img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    object-position: center;
+    margin: 20px;
+}
+
+.ill img{
+    width: 350px;
+    height: 500px;
+    object-fit: cover;
+}
+.ill p{
+    position: absolute;
+    font-size: 50px;
+    color: #F39333;
+    font-family: var(--font-familyone);
+    font-weight: 600;
+}
+
+.ill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+@media screen and (min-width:760px) {
+    .group1{
+        margin-top: 30px;
+    }
+    .group1 img{
+        height: 500px;
+    }
+    .offer h3{
+        font-size: 30px;
+    }
+    .at{
+        font-size: 20px;
+    }
+    .box1{
+        width: 60%;
+    }
+    .projects h3{
+        font-size: 30px;
+    }
+    .project1{
+        width: 250px;
+    }
+    .auto{
+        width: 250px;
+    }
+    .you{
+        width: 100%;
+    }
+    .you iframe{
+        width: 500px;
+        height: 300px;
+    }
+    .logos img{
+        margin: 10px;
+    }
+    .illustrator img{
+        height: 600px;
+        object-fit: fill;
+        margin-top: 100px;
+    }
+}
+@media screen  and (min-width:960px) {
+    .unlocking h3{
+        font-size: 30px;
+    }
+    .para{
+        width: 60%;
+    }
+    .group1{
+        width: 60%;
+    }
+    .boxes{
+        flex-direction: row;
+
+    }
+    .box1{
+        width: 25%;
+    }
+    .projects{
+        margin-top: 70px;
+    }
+    .you{
+        width: 40%;
+        height: 300px;
+    }
+    .more{
+        height: 250px;
+    }
+    .more h3{
+        font-size: 30px;
+    }
+    .more p{
+        font-size: 20px;
+    }
+    .email input{
+        width: 500px;
+        padding: 15px 0;
+    }
+    .email button{
+        margin-top: 8px;
+    }
+    .email{
+        margin-top: 20px;
+    }
+    .logos{
+        height: 200px;
+       
+    }
+    .logos img{
+        margin-left: 100px;
+    }
+}
+

@@ -1,0 +1,145 @@
+.post-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.post-banner h2{
+    font-family: var(--font-familyone);
+}
+.post-banner img{
+    width: 100%;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.details{
+    padding: 30px;
+    
+    margin-bottom: 20px;
+    width: 90%;
+    height: auto;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.15);
+    margin-top: -100px;
+    z-index: 1;
+}
+.f{
+    display: flex;
+    gap: 10px;
+}
+.publisher-detail{
+    display: flex;
+    font-size: 10px;
+    gap: 10px;
+    align-items: center;
+}
+.ff{
+    padding: 7px 15px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 50px;
+    font-weight: 700;
+}
+.creator{
+    margin-top: 10px;
+}
+.creator-p{
+    margin-top: 10px;
+    font-family: var(--font-familytwo);
+}
+.fo{
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+.details-all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.post-text{
+    margin-top: 20px;
+    padding: 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+br{
+    margin-top: 20px;
+}
+.post-text ol li span{
+    font-weight: 800;
+    font-size: 20px;
+}
+.post-text ul li{
+    list-style-type: disc;
+}
+.post-text h3, h5,h1, h2,h4{
+    font-family: var(--font-familyone);
+}
+.post-text p, li, a{
+    font-family: var(--font-familytwo);
+}
+
+.prev-next{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+.left img{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+.left{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.left a{
+    font-size: 12px;
+    color: #000;
+    font-family: var(--font-familytwo);
+    font-weight: 600;
+    
+}
+
+.post-text ol li{
+    list-style-type: decimal;
+}
+
+@media screen and (min-width:960px) {
+    .details{
+        padding: 50px;
+        margin-top: -140px;
+        width: 80%;
+        border-radius: 50px;
+
+    }
+    .post-text{
+        padding: 40px;
+    }
+    .post-text p, li, a{
+        font-size: 20px;
+    }
+    .post-text h5{
+        font-size: 25px;
+    }
+    .f span{
+        font-size: 20px;
+    }
+    .creator{
+        font-size: 30px;
+    }
+    .creator-p{
+        font-size: 23px;
+    }
+    .post-banner img{
+        width: 95%;
+        height: 600px;
+        border-radius: 50px;
+    }
+}

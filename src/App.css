@@ -1,0 +1,136 @@
+.login-form{
+    width: 100%;
+    height: 100vh;
+    background: var(--admin-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contain h3{
+    font-family: var(--font-familyone);
+    text-transform: capitalize;
+    font-size: 20px;
+    
+}
+.text1 {
+    font-size: 24px;
+
+}
+.contain{
+    width: 300px;
+    height: auto;
+    background: var(--color-three);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.contain img{
+    width: 100px;
+    height: 100px;
+}
+.ico {
+    width:100px;
+    height: 100px;
+}
+.input{
+    margin-top: 30px;
+}
+.input input{
+    padding: 10px 20px;
+    border: 2px solid rgb(41, 41, 194);
+    border-radius: 20px;
+    outline: none;
+    font-size: 15px;
+}
+textarea {
+    
+    border: 2px solid blue;
+    border-radius: 20px;
+    outline: none;
+    font-size: 15px;
+}
+.input input::placeholder{
+    font-family: var(--font-familyone);
+    font-size: 15px;
+}
+textarea::placeholder{
+    font-family: var(--font-familyone);
+    font-size: 15px;
+}
+.contain form button{
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px 20px;
+    background: rgb(41, 41, 194);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-family: var(--font-familyone);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.error{ 
+    color: red; 
+    font-size: 12px; 
+    text-align: center; 
+    margin: 0 auto; 
+    font-family: var(--font-familyone);
+}
+
+.user-stat{ 
+    color: black; 
+    font-size: 12px; 
+    text-align: center; 
+    margin: 0 auto; 
+    font-family: var(--font-familyone);
+}
+.user-stat b {
+    cursor: pointer;
+    color: blue;
+}
+@media screen and (min-width:768px) {
+    .contain{
+        width: 500px;
+    }
+    .input input{
+        width: 400px;
+    }
+}
+.delete {
+        background-color: red;
+        color: white; 
+        font-size: 12px; 
+        text-align: center; 
+        margin: 0 auto; 
+        font-family: var(--font-familyone);
+        border-radius: 10px;
+        border: 2px solid red;
+    }
+    
+    .edit{
+        background-color: green;
+        color: white; 
+        font-size: 12px; 
+        text-align: center; 
+        margin: 0 auto; 
+        font-family: var(--font-familyone);
+        border-radius: 10px;
+        border: 2px solid green;
+    }
+    .padding {
+        padding-left: 30px;
+
+    }
+    .flex {
+        display: flex; justify-content: space-between; padding-bottom: 10px;
+    }
+    .admin-home {
+        width: 70%; margin: 0 auto;
+    }

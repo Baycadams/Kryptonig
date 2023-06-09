@@ -1,0 +1,266 @@
+
+
+.slider-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-container h2{
+    font-family: var(--font-familyone);
+    margin-bottom: 10px;
+}
+.p{
+    font-family: var(--font-familytwo);
+    text-align: center;
+}
+
+.slide{
+    background-size: cover;
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+    padding: 15px;
+  }
+  
+  .slide h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .feat{
+      padding: 2px;
+      width: 100px;
+      background-color: rgb(235, 235, 235);
+      color: #000;
+      font-family: var(--font-familyone);
+      font-weight: 600;
+      border-radius: 50px;
+      text-align: center;
+      margin-top: 23px
+  }
+  .date-publish{
+      margin-top: 20px;
+      font-family: var(--font-familytwo);
+      color: #fff;
+      display: flex;
+      gap: 20px;
+  }
+  .create{
+      color: white;
+      font-family: var(--font-familyone);
+      font-weight: 500;
+      font-size: 20px;
+      margin-top: 20px;
+  }
+  .pp{
+      font-family: var(--font-familytwo);
+      font-size: 15px;
+      color: #fff;
+      margin-top: 10px;
+  }
+  .blogs{
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+  }
+
+
+   .blog-post{
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-content: center;
+       padding: 20px;
+       margin-top: 40px;
+   } 
+   .blogImg{
+       width: 100%;
+       height: 300px;
+   }
+   .blogImg img{
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       object-position: center;
+   }
+   .date-publish2{
+    margin-top: 20px;
+    font-family: var(--font-familytwo);
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    color: black;
+}
+
+.tittle{
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: var(--font-familyone);
+    margin-top: 10px;
+    color: #000;
+}
+.content{
+    margin-top: 10px;
+    color: #000;
+    font-family: var(--font-familytwo);
+    text-align: justify;
+}
+.ct{
+    margin-top: 10px;
+    color: #000;
+    display: flex;
+    gap: 20px;
+    outline: 1px solid black;
+    outline-style: dashed;
+    padding: auto;
+    width:310px;
+    padding: 10px;
+    justify-content: flex-start;
+}
+.ct span{
+    padding: 5px 15px;
+    background: rgb(226, 226, 226);
+    border-radius: 10px;
+    font-weight: 500;
+    font-family: var(--font-familyone);
+}
+
+
+.hhh{
+    margin-top: 50px;
+    width: 100%;
+    background: black;
+    height: 100vh;
+}
+
+/****Comment section**/
+.comment{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    padding: 40px;
+    gap: 20px;
+} 
+.comment h3{
+    font-family: var(--font-familyone);
+    font-weight: 500;
+}
+.comment form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.comment form input{
+    padding: 10px 20px;
+    width: 300px;
+    border: 2px solid #0E5BA7;
+    outline: none;
+    border-radius: 7px;
+    font-family: var(--font-familytwo);
+    font-weight: 600;
+}
+
+.comment form textarea{
+    width: 300px;
+    border: 2px solid #0E5BA7;
+    border-radius: 7px;
+    padding: 10px;
+    outline: none;
+    font-family: var(--font-familyone);
+}
+.comment form button{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background:#0E5BA7;
+    color: #fff;
+    font-family: var(--font-familyone);
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+
+
+
+  @media screen and (min-width:768px) {
+      .slide{
+          height: 500px;
+      }
+      .all{
+          margin-top: 150px;
+          width: 100%;
+      }
+      .date-publish{
+          font-size: 30px;
+      }
+      .create{
+          font-size: 30px;
+      }
+      .pp{
+          font-size: 25px;
+      }
+      .feat{
+          width: 150px;
+          padding: 10px;
+          font-size: 20px;
+      }
+      .comment form input{
+          width: 500px;
+          padding: 15px 25px;
+          font-size: 17px;
+      }
+      .comment form textarea{
+          width: 500px;
+      }
+  }
+  @media screen and (min-width:960px) {
+      .slider-container{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      }
+      .slide{
+          width: 95%;
+          height: 700px;
+          margin: auto;
+          border-radius: 50px;
+          margin-top: 50px;
+      }
+      .all{
+          margin-top: 400px;
+      }
+      .blog-post{
+          width: 100%;
+          flex-direction: row;
+          gap: 30px;
+      }
+      .blogImg{
+          width: 45%;
+          }
+          .textPlace{
+              width: 45%;
+          }
+      .Appblog{
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+
+      }
+      .p{
+          font-size: 25px;
+      }
+  }

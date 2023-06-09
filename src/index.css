@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+*, 
+*::before, 
+*::after {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+} 
+li{
+    list-style-type: none;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/Group\ 14.png);
+    background-repeat: repeat-y;
+    background-size: contain;
+    background-position: center;
+
+}
+:root{
+    --font-familyone:'Raleway', sans-serif;
+    --font-familytwo: 'Open Sans', sans-serif;
+}

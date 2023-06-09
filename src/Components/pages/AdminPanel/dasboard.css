@@ -1,0 +1,49 @@
+.dashboard{
+    width: 100%;
+    height: 100vh;
+    background: var(--admin-background);
+    text-align: center;
+    margin-top: 100px;
+}
+button{
+    margin-top: 100px;
+}
+.padd {
+    padding-top: 30px;
+}
+.create { color: black; text-align: center; margin: 0 auto; font-family: var(--font-familyone); padding-top: 70px;}
+.create label, .create select, .create button {display: block; text-align: center; }
+.create select, .create button {text-align: center; margin: auto;}
+.create label {padding-top: 30px; color: black; font-size: medium;}
+.create input, .create textarea, .create select {width: 400px; border-radius: 5px; border: 1px solid gray; height: 50px;}
+.create textarea {height: 100px;}
+.create select {text-align: left; padding:  5px 0;}
+button {background-color: rgb(41, 41, 194); color: white; border: 3px solid white; border-radius: 5px;
+width: 120px; height: 40px; cursor: pointer; }
+.btn {padding-top: 10px;}
+.create input {height: 20px;}
+.create h2 {color: black; font-size: large;}
+.username {
+    text-transform: capitalize;
+}
+.tithe {
+    padding-bottom: -5px;
+}
+.hug {
+    height: 20px; color: black;
+}
+.font {
+    font-size: 16px;
+}
+.dash {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.btn2 {
+    border: 2px solid rgb(41, 41, 194);
+    border-radius: 5px;
+}
+.btn1 {
+    border: 2px solid red;
+    border-radius: 5px;
+}
