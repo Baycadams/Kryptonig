@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Feat from '../feat';
 import BlogDetails3 from '../BlogDetails3';
 import PostText3 from '../Post-Text3';
 import Comment from '../Comment';
@@ -13,14 +12,14 @@ const Featured3 = ()=>{
 
     return(
         <div>
-            <Navbar/>
+            {/* <Navbar/>
             <Feat/>
             <BlogDetails3/>
             <PostText3/>
             <Comment/>
             <More/>
             <Logo/>
-            <Footer/>
+            <Footer/> */}
         </div>
     )
 }

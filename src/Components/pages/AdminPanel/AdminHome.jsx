@@ -4,7 +4,6 @@ import { auth } from '../../../firebase'
 import { onAuthStateChanged, signOut } from 'firebase/auth'
 import { db } from '../../../firebase'
 import {collection, deleteDoc, doc, onSnapshot} from 'firebase/firestore'
-import HTMLReactParser from 'html-react-parser'
 import { useNavigate } from 'react-router-dom'
 import Login from './login'
 
@@ -73,16 +72,16 @@ const AdminHome = ({editID, setEditID, title, setTitle, editing, setEditing, bod
                 <h2 className='dash'>Welcome to your dashboard, <span className='username'>{username}</span></h2>
                 
                 {websiteBlog.map((blog) => {
-                    const {id, author, body, date, link, photo, tag1, tag2, title, post} = blog
+                    const {id, title} = blog
                     return (
                         <div className="admin-home" key={id}>
                             <div className='flex'>
-                                <h2>{title}</h2>
+                                <p className='flexx' >{title}</p>
                                
                             
                                 <div className="flex">
                                     <div className="padding"><button className='delete' onClick={()=>{handleDelete(id)}}>Delete</button></div>
-                                    {/* <div className="padding"><button className='edit' onClick={()=>{handleEdit(id)}}>Edit</button></div>                             */}
+                                    {/* <div className="padding"><button className='edit' onClick={()=>{handleEdit(id)}}>Edit</button></div>*/}
                                 </div>
                                 
                             </div>

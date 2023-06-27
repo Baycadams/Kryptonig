@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import './Home.css'
+import { HashLink } from 'react-router-hash-link';
 
 
 const Hero = ()=>{
@@ -15,13 +16,13 @@ const Hero = ()=>{
                Kryptonig brings next generation digital and marketing solution for web3 creators. Creators can access greater funding via our DAO liquidity pool, promote their projects in our showroom and learn from our community forum via our contribute-to-earn model. <br /> Discover our products today. 
             </div>
             <div className="cont">
-            <Link to="/wishlist">
+            <HashLink to="#more" smooth>
                <button className='join-btn'>Join Our Wait-List</button>
-            </Link>
-            <Link to="/contact">
+            </HashLink>
+            <Link to="https://www.linkedin.com/company/kryptonig-llc/">
                <button className='join-btn  non-btn'>Contact Us</button>
             </Link>
-            </div>
+            </div> 
             <div class="group1">
                 <img src="images/Group 1.png" alt=""  />
             </div>

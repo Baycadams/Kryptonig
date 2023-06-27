@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { collection, doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../firebase';
-import { Parser } from 'html-to-react';
-import HTMLReactParser from 'html-react-parser';
-import BlogText from './BlogComponents/blogText';
+
 
 
 const PostText = ()=>{
 
     const [websiteBlog, setWebsiteBlog] = useState({})
-    const htmlParser = new Parser()
 
     const {id} = useParams();
     useEffect(()=>{
@@ -26,12 +23,9 @@ const PostText = ()=>{
 
 
     return(
-        <div className="post-all text1">
-            {/* <p style={{fontSize: '22px'}} dangerouslySetInnerHTML={{__html:websiteBlog.body}}/> */}
-            {htmlParser.parse(websiteBlog.body)}
+        <div className="">
+            <p className='blogg' style={{fontSize: '22px', marginLeft: '20px', marginRight: '20px'}} dangerouslySetInnerHTML={{__html:websiteBlog.body}}/>
             
-            
-        
         </div>
     )
 }

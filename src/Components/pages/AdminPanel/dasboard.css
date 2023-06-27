@@ -9,7 +9,10 @@ button{
     margin-top: 100px;
 }
 .padd {
-    padding-top: 30px;
+    padding-top: 100px;
+}
+.home-post {
+    font-size: 5px;
 }
 .create { color: black; text-align: center; margin: 0 auto; font-family: var(--font-familyone); padding-top: 70px;}
 .create label, .create select, .create button {display: block; text-align: center; }

@@ -6,8 +6,13 @@
     object-position: center;
 }
 
+.nav-logo {
+    padding-top: 7px;
+}
+
 .nav-container{
     max-width: 100%;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,6 +22,7 @@
     right: 0;
     left: 0;
     z-index: 1;
+    border-bottom: 1px solid #F39333;
 }
 .none{
     display: none;
@@ -24,7 +30,7 @@
 
 .uls{
     position: absolute;
-    top: 75px;
+    top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,18 +73,28 @@
 }
 .Wish{
     color: #fff;
+    font-size: 12px;
 }
-.menu-btn{
-    margin-right: 20px;
-}
+
 .menu-btn button{
-    padding: 7px 10px;
-    font-size: 17px;
+    margin-top: -5px;
+    font-size: 30px;
     border: none;
     background: none;
-    font-weight: 700;
     outline: none;
 }
+
+.icon00 {
+    color:#0E5BA7
+}
+.icon00:hover {
+    color: #F39333;
+}
+
+.menu-btn button:hover{
+    color: #F39333;
+}
+
 
 @media screen and (min-width:960px) {
 
@@ -116,5 +132,12 @@
     }
     .Wish{
         font-size: 15px;
+    }
+}
+
+@media screen  and (max-width: 280px) {
+    
+    .joinwish {
+        display: none;
     }
 }

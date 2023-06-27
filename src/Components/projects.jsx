@@ -1,44 +1,81 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import './Home.css'
+import { useState, useEffect } from 'react'
+import data from './ProjectsData'
+import { FaCircle } from 'react-icons/fa';
 
 
 
 
 const Projects = ()=>{
+    const [project, setProject] = useState(data)
+    const [index, setIndex] = React.useState(0)
 
+      useEffect(() => {
+        let slider = setInterval(() => {
+          setIndex((oldIndex) => {
+            let index = oldIndex + 1
+            if (index > project.length - 1) {
+              index = 0
+            }
+            return index
+          })
+        }, 5000)
+        return () => {
+          clearInterval(slider)
+        }
+      }, [index])    
 
     return(
        <div className="projects">
            <h3>Projects on our Radar</h3>
-           <div class="project-slides reveal-img">
-                    <NavLink to=''>
-                    <div className="project1">
-                        <div class="project-img">
-                            <img src="images/project1.jpg" alt="" />
+           <div className="section-center">
+                {project.map((item, itemIndex)=> {
+                    const {id, head, image, body, button} = item
+
+                    let position = 'nextSlide'
+                        if (itemIndex === index) {
+                            position = 'activeSlide'
+                        }
+                        if (
+                            itemIndex === index - 1 ||
+                            (index === 0 && itemIndex === project.length - 1)
+                        ) {
+                            position = 'lastSlide'
+                        }
+
+                    return (
+                        <article className={position} style={{display: "flex", justifyContent: "center"}} key={id}>
+                            <div className='div'>
+                                <img style={{height: "55%", width: "100%", display: "flex", justifyContent: "center"}} src={image} alt="" />
+                                <h5>{head}</h5>
+                                <h6>{body}</h6>
+                                <p>{button}</p>
+                            </div>
+                        </article>
+                    )
+                })}
+
+            </div>
+
+            <div className="dot-center1">
+                
+
+                {project.map((item, itemIndex)=> {
+                    const {id} = item
+
+                    let colour = 'grey'
+                        if (itemIndex === index) {
+                            colour = '#F39333'
+                        }
+
+                    return (
+                        <div className='dots1' key={id}>
+                            <FaCircle style={{width: "120px", height: "120px"}} color={colour} />
                         </div>
-                        <div className="hold">
-                            <p className="ret">THE EFFECT OF CHIAROSCURO</p>
-                            <p class="ips">Creating art with light and shade, also known as chiaroscour,add an extra dimension to the work. it helps the viwers
-                            eyes <span>Readmore.... </span>
-                            </p>
-                        </div>
-                    </div>
-                    </NavLink>
-                    
-                    <NavLink to=''>
-                    <div className="project1">
-                        <div class="project-img">
-                            <img src="images/project2.jpg" alt="" />
-                        </div>
-                        <p className="ret">THE BLACK AND WHITE PROJECT</p>
-                        <p class="ips">whiteboy in a black nation is a graphics painting, it depicts a boy with a balencleva standing in an open field 
-                            on an open field on a hillside. <span>Readmore.... </span>
-                            
-                        </p>
-                    </div>
-                    </NavLink>
-              </div>
+                    )
+                })}
+            </div>
        </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom'
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa';
 
 
 import './Home.css'
@@ -13,20 +13,16 @@ const Footer = ()=>{
                 <div className="footer-logo">
                     <img src="https://firebasestorage.googleapis.com/v0/b/kryptonig.appspot.com/o/websiteBlog%2Flogo.png?alt=media&token=c69cd70e-00ea-4189-9fe8-4fe4ef948755&_gl=1*1dt378a*_ga*MTg4MjM4NjY4OS4xNjYzMDY3NzUw*_ga_CW55HF8NVT*MTY4NjE1OTg4OS4yNS4xLjE2ODYxNjMxNDEuMC4wLjA." alt="" />
                 </div>
-                <p>Kryptonig 2022. All right Reserved</p>
+                <p style={{fontStyle: 'italic'}}>Kryptonig 2023. All right Reserved</p>
                 <div className="social-icons">
-                <a href=""> 
-                <FaFacebook/>
-                </a>
-                <a href="">
+                <a href="https://twitter.com/KryptonigLLC?s=09"> 
                 <FaTwitter/>
                 </a>
-                <a href="">
-                <FaInstagram/>
+               
+                <a href="https://www.linkedin.com/company/kryptonig-llc/">
+                <FaLinkedin/>
                 </a>
-                <a href="">
-                    <FaYoutube/>
-                </a>
+                
                 </div>
             </div>
             <div className="others">

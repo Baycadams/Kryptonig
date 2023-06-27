@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css'
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = ()=>{
     const [toggle, setToggle] = useState(false)
@@ -8,7 +10,7 @@ const Navbar = ()=>{
     }
     return(
         <nav className="nav-container">
-    
+            
                 <NavLink exact to='/' className='nav-logo'>
                     <img src="https://firebasestorage.googleapis.com/v0/b/kryptonig.appspot.com/o/websiteBlog%2Flogo.png?alt=media&token=c69cd70e-00ea-4189-9fe8-4fe4ef948755&_gl=1*mky9ul*_ga*MTg4MjM4NjY4OS4xNjYzMDY3NzUw*_ga_CW55HF8NVT*MTY4NjE1OTg4OS4yNS4xLjE2ODYxNjM1NTEuMC4wLjA." alt=""className='logo' />
                 </NavLink>
@@ -49,12 +51,14 @@ const Navbar = ()=>{
                 </ul>
 
             <div className="joinwish">
-                        <NavLink exact to='/Wishlist' className='Wish'>
-                            Join Our Wait-List
-                        </NavLink>
+                <HashLink to='#more' className='Wish'>
+                    Join Our Wait-List
+                </HashLink>
             </div>
+            
             <div className="menu-btn">
-                <button onClick={handleClick}>&#9776;</button>
+                
+                <button onClick={handleClick}>{toggle ?  <FaTimes className='icon00' /> : <FaBars className='icon00' /> }</button>
             </div>
         </nav>
     )

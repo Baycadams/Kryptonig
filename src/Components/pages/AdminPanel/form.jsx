@@ -1,72 +1,43 @@
 import React, { useState, useRef, useMemo } from 'react'
 import JoditEditor from 'jodit-react'
 import { db} from '../../../firebase'
-import {collection, addDoc, doc, updateDoc} from 'firebase/firestore'
-import { storage } from '../../../firebase'
-import { ref,uploadBytes,listAll, getDownloadURL} from 'firebase/storage'
+import {collection, addDoc} from 'firebase/firestore'
+import { getStorage, ref, uploadBytes, getDownloadURL} from 'firebase/storage'
 import { useNavigate } from 'react-router-dom'
-import HTMLReactParser from 'html-react-parser'
+import ReactQuill from 'react-quill'
+import 'react-quill/dist/quill.snow.css'
+
 
 
 const Form = ({title, content, editID, setEditID, setContent, editing, setEditing, setTitle, body, setBody, author, setAuthor, image, setImage, link, setLink, date, setDate, tag1, setTag1, tag2, setTag2}) => {
+    const [downloadURL, setDownloadURL] = useState('');
+    
+    const handleImageUpload = async (e) => {
+        const imageFile = e.target.files[0];
+    
+        try {
+          const storage = getStorage();
+          const storageRef = ref(storage, `websiteBlog/${imageFile.name}` );
+    
+          await uploadBytes(storageRef, imageFile);
+    
+          const url = await getDownloadURL(storageRef);
+          setDownloadURL(url);
+          console.log(downloadURL);
+        } catch (error) {
+          console.error('Error uploading image:', error);
+        }
+      };
+    
     const editor = useRef(null)
     
-
     const navigate= useNavigate()
 
-    
     const [isLoading, setIsLoading] = useState(false)
     
-    // const handleUpload =()=> {
-    //     if(image == null) return;
-        
-    //     const imageListRef = ref(storage, 'websiteImages/')
-    //     const imageRef = ref(storage, `websiteImages/${image.name}`)
-    //     uploadBytes(imageRef, image)
-    //     .then(()=>{
-    //         alert('image uploaded')
-    //     })
-    //     .then((
-    //         listAll(imageListRef).then((response) => {
-    //             response.items.forEach((item)=>{
-    //                 getDownloadURL(item).then((url)=> {
-    //                     setImageURL((prev)=> [...prev, url])
-                        
-    //                 })
-    //             })
-    //         })
-    //     ))
-        
-    // }
 
-    const handleEdit= () => {
-        const editedPost = {
-            title: title,
-            author: author,
-            body: content,
-            photo: image,
-            link: link,
-            date: date,
-            tag1: tag1,
-            tag2: tag2
-        }
-        const docRef = doc(db, "websiteBlog", editID)
-        updateDoc(docRef, editedPost)
-        .then(docRef => {
-            alert('blog post edited')
-        })
-        .catch(error => {alert(error.message)})
 
-            // setTitle('')
-            // setBody('')
-            // setLink('')
-            // setDate('')
-            // setTag1('')
-            // setTag2('')
-            // setEditID('')
-            // navigate('/adminpanel/home')
 
-    }
     
     const handleSubmit = (e) => {
        
@@ -78,8 +49,7 @@ const Form = ({title, content, editID, setEditID, setContent, editing, setEditin
                 title: title,
                 author: author,
                 body: content,
-                photo: image,
-                link: link,
+                imageURL: downloadURL,
                 date: date,
                 tag1: tag1,
                 tag2: tag2,
@@ -117,7 +87,15 @@ const Form = ({title, content, editID, setEditID, setContent, editing, setEditin
                 
                 
                 <label> Blog body:</label>
-                <JoditEditor ref={editor} value={content} onChange={newContent =>setContent(newContent)}/>
+                {/* <textarea
+                style={{height: '250px', border: "2px solid blue"}}
+                placeholder='blog body'
+                type='text'
+                required
+                value={content}
+                onChange = {(e) => setContent(e.target.value)}/> */}
+                {/* <JoditEditor ref={editor} value={content} onChange={newContent =>setContent(newContent)}/> */}
+                <ReactQuill theme='snow' value={content} onChange={setContent} />
                 
                 <label> Author:</label>
                 <select
@@ -128,16 +106,8 @@ const Form = ({title, content, editID, setEditID, setContent, editing, setEditin
                     <option>Adams Nwokedi</option>
                     <option>Sobechi Savictor Evans-Ibe</option>
                 </select>
-                <input className='hug' name='file' type="file" onChange={(e) => setImage(e.target.files[0])} style={{border: "2px solid blue"}} />
+                <input className='hug' accept='image/*' type="file" onChange={handleImageUpload} style={{border: "2px solid blue"}} />
 
-                <label >Image Link:</label>
-                <textarea
-                style={{height: '50px', border: "2px solid blue"}}
-                placeholder='image link'
-                type='text'
-                required
-                value={link}
-                onChange = {(e) => setLink(e.target.value)}/>
                 <label htmlFor="start">Date</label>
                 <input
                 style={{height: '50px', border: "2px solid blue"}}
@@ -145,6 +115,7 @@ const Form = ({title, content, editID, setEditID, setContent, editing, setEditin
                 type='date'
                 onChange = {e => setDate(e.target.value)}/>
                 <label htmlFor="tag1">Tags</label>
+
                 <textarea
                 style={{height: '50px', border: "2px solid blue"}}
                 placeholder='Tag'
@@ -159,7 +130,7 @@ const Form = ({title, content, editID, setEditID, setContent, editing, setEditin
                 required
                 value={tag2}
                 onChange = {(e) => setTag2(e.target.value)}/>
-               
+                
                 {!isLoading && !editing && <div className="btn"><button className='btn2' onClick={handleSubmit}>Add Blog</button></div>}
                 {isLoading && <div className="btn"><button className='btn2' disabled>Adding Blog</button></div>}
                 {editing && <div className="btn"><button className='btn2' onClick={handleEdit} >Edit Blog</button></div>}

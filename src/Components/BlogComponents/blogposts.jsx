@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import BlogPost from './blogprop';
 import HTMLReactParser from 'html-react-parser';
 import {NavLink} from 'react-router-dom';
+import { format } from 'date-fns';
 
 import './Blog.css'
 import { collection, onSnapshot } from 'firebase/firestore';
@@ -19,19 +20,21 @@ const Blogs = () => {
 
 
 }, [])
+ 
 
   return (
     <div >
 
       {websiteBlog.map((blog) => {
-        const {id, author, body, date, link, photo, tag1, tag2, title} = blog
+        const {id, author, body, date, imageURL, tag1, tag2, title} = blog
+        const blogg = HTMLReactParser(body.substring(0, 360))
         return <div className='Appblog' key={id}>
-          <NavLink exact to={`/blog/${id}`} >
+          <NavLink exact to={`/blog/${id}`} id={id} >
           <BlogPost 
-            blogImg ={link}
-            title={title}
-            content={HTMLReactParser(body.substring(0, 360) + '.....')}
-            date={date}
+            blogImg ={imageURL}
+            tittle={title}
+            content={blogg}
+            date={format(new Date(date), 'do MMMM Y')}
             publish={author}
             crypto={tag1}
             tech={tag2}

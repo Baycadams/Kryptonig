@@ -7,6 +7,7 @@ import More from '../more';
 import Logo from '../Logo';
 import Footer from '../Footer';
 import Navbar from '../Navbar';
+import HomeBlog from '../homeBlog';
 
 
 const Home = ()=>{
@@ -16,9 +17,11 @@ const Home = ()=>{
             <Hero/>
             <Illustrator/>
             <Projects/>
-            <Play/>
+            <Play/> 
+            <HomeBlog />
             <More/>
-            <Logo/>
+            {/* <Logo/> */}
+            
             <Footer/>
        </div>
     )

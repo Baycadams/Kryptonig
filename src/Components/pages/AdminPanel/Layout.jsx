@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
     const menuItems = [
         {
             id: 1,
-            path: '/home',
+            path: '/adminpanel/home',
             text: 'Home'
         },
         {
@@ -56,7 +56,7 @@ const Layout = ({children}) => {
           >
             <FaBars color='blue' sx={{width: '40px', height: '40px'}} />
           </IconButton>
-          <Typography color='blue' variant="h6" noWrap component="div">
+          <Typography color='blue' variant="h6" noWrap component="div" sx={{display: { md: 'block', xs: 'none' } }}>
             Admin Dashboard
           </Typography>
         </Toolbar>

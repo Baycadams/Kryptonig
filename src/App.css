@@ -12,6 +12,9 @@
     font-size: 20px;
     
 }
+.italics {
+    font-style: italic;
+}
 .text1 {
     font-size: 24px;
 
@@ -95,6 +98,18 @@ textarea::placeholder{
     cursor: pointer;
     color: blue;
 }
+.blogg {
+    padding-left: '15px'; 
+    padding-right: '15px';
+    
+    font-family: var(--font-familyone);
+}
+@media screen and (min-width:920px) {
+    
+    .flex p {
+        font-size: 16px;
+    }
+}
 @media screen and (min-width:768px) {
     .contain{
         width: 500px;
@@ -102,16 +117,22 @@ textarea::placeholder{
     .input input{
         width: 400px;
     }
+    
+}
+.flexx {
+    font-size: 9px;
 }
 .delete {
         background-color: red;
         color: white; 
-        font-size: 12px; 
+        font-size: 8px; 
         text-align: center; 
         margin: 0 auto; 
         font-family: var(--font-familyone);
         border-radius: 10px;
         border: 2px solid red;
+        width: 50px;
+        height: 30px;
     }
     
     .edit{
@@ -131,6 +152,7 @@ textarea::placeholder{
     .flex {
         display: flex; justify-content: space-between; padding-bottom: 10px;
     }
+   
     .admin-home {
         width: 70%; margin: 0 auto;
     }

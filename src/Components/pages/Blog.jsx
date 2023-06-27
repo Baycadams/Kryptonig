@@ -13,7 +13,7 @@ const Blog = ()=>{
             <Slider/>
             <Blogs/>
             <More/>
-            <Logo/>
+            {/* <Logo/> */}
             <Footer/>
         </div>
     )

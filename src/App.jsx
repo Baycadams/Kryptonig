@@ -9,8 +9,6 @@ import Invest from './Components/pages/Invest';
 import Blog from './Components/pages/Blog';
 import Wishlist from './Components/pages/wishlist';
 import Featured from './Components/pages/Featured';
-import Featured2 from './Components/pages/Featured2';
-import Featured3 from './Components/pages/Featured3';
 import Admin from './Components/pages/AdminPanel/admin';
 import AdminHome from './Components/pages/AdminPanel/AdminHome';
 import AddBlog from './Components/pages/AdminPanel/AddBlog';
@@ -43,7 +41,7 @@ function App() {
           <Route exact  path='/blog' Component={Blog}></Route>
           <Route exact  path='/wishlist' Component={Wishlist}></Route>
           <Route exact  path='/blog/:id' Component={Featured}></Route>
-          <Route exact path='/home'  element={<AdminHome content={content } editID={editID} setEditID = { setEditID} setContent = {setContent} title={title} setTitle={setTitle} body={body} setBody={setBody} author={author} setAuthor={setAuthor} image={image} setImage={setImage} link={link} setLink={setLink} date={date} setDate={setDate} tag1={tag1} setTag1={setTag1} tag2={tag2} setTag2={setTag2} editing={editing} setEditing={setEditing}/>}></Route>
+          <Route exact path='/adminpanel/home'  element={<AdminHome content={content } editID={editID} setEditID = { setEditID} setContent = {setContent} title={title} setTitle={setTitle} body={body} setBody={setBody} author={author} setAuthor={setAuthor} image={image} setImage={setImage} link={link} setLink={setLink} date={date} setDate={setDate} tag1={tag1} setTag1={setTag1} tag2={tag2} setTag2={setTag2} editing={editing} setEditing={setEditing}/>}></Route>
           <Route exact path='/addblog' element={<AddBlog content={content } editID={editID} setEditID = { setEditID} setContent = {setContent} title={title} setTitle={setTitle} body={body} setBody={setBody} author={author} setAuthor={setAuthor} image={image} setImage={setImage} link={link} setLink={setLink} date={date} setDate={setDate} tag1={tag1} setTag1={setTag1} tag2={tag2} setTag2={setTag2} editing={editing} setEditing={setEditing} />}></Route>
 
           </Routes>
