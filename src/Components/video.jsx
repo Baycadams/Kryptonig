@@ -1,87 +1,56 @@
 import React, { useEffect, useState } from 'react';
 import data from './PodcastData';
-
-
 import './Home.css'
-import { FaCircle } from 'react-icons/fa';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css'
 
-const Play = ()=>{
-
+const Play = ({darkMode})=>{
     const [podcast, setPodcast] = useState(data)
-    const [index, setIndex] = React.useState(0)
-
-    useEffect(() => {
-
-        let slider = setInterval(() => {
-          setIndex((oldIndex) => {
-            let index = oldIndex + 1
-            if (index > podcast.length - 1) {
-              index = 0
-            }
-            return index
-          })
-        }, 5000)
-        return () => {
-          clearInterval(slider)
+    const responsive = {
+        superLargeDesktop: {
+          // the naming can be any, depends on you.
+          breakpoint: { max: 4000, min: 3000 },
+          items: 3
+        },
+        desktop: {
+          breakpoint: { max: 3000, min: 980 },
+          items: 2
+        },
+        tablet: {
+          breakpoint: { max: 980, min: 464 },
+          items: 2
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1
         }
-
-      }, [index])  
-
+    };
 
     return(
-        <div className='play'>
+        <div className={darkMode ? 'play-dark' : 'play'}>
             <h3> Kryptonig Podcast</h3>
-          
-            <div className="section-center">
+            <p>Get updates on latest trends from the creators’ world</p>
+
+            <Carousel responsive={responsive}>
                 {podcast.map((item, itemIndex)=> {
-                    const {id, link} = item
+                        const {id, link} = item
 
-                    let position = 'nextSlide'
-                        if (itemIndex === index) {
-                            position = 'activeSlide'
-                        }
-                        if (
-                            itemIndex === index - 1 ||
-                            (index === 0 && itemIndex === podcast.length - 1)
-                        ) {
-                            position = 'lastSlide'
-                        }
-
-                    return (
-                        <article className={position} key={id}>
-                            <iframe 
-                                width="200" 
-                                height="315" 
-                                src={link}
-                                title="YouTube video player" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-                                
-                            </iframe>
-                        </article>
-                    )
-                })}
-
-            </div>
-
-            <div className="dot-center">
-                {/* the dot section */}
-
-                {podcast.map((item, itemIndex)=> {
-                    const {id} = item
-
-                    let colour = 'grey'
-                        if (itemIndex === index) {
-                            colour = '#F39333'
-                        }
-
-                    return (
-                        <div className='dots' key={id}>
-                            <FaCircle color={colour} />
-                        </div>
-                    )
-                })}
-            </div>
+                        return (
+                            <div style={{marginTop: "30px", borderRadius: "30px"}} key={id}>
+                                <iframe
+                                    style={{borderRadius: "50px"}} 
+                                    width="300" 
+                                    height="315" 
+                                    src={link}
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                                    
+                                </iframe>
+                            </div>
+                        )
+                    })}
+            </Carousel>
             
         </div>
     )

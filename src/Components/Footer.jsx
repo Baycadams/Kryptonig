@@ -3,76 +3,116 @@ import {NavLink} from 'react-router-dom'
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa';
 
 
-import './Home.css'
+import './footer.css'
 
 
-const Footer = ()=>{
+const Footer = ({darkMode})=>{
     return(
-        <div className='footer'>
-            <div className="first">
-                <div className="footer-logo">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/kryptonig.appspot.com/o/websiteBlog%2Flogo.png?alt=media&token=c69cd70e-00ea-4189-9fe8-4fe4ef948755&_gl=1*1dt378a*_ga*MTg4MjM4NjY4OS4xNjYzMDY3NzUw*_ga_CW55HF8NVT*MTY4NjE1OTg4OS4yNS4xLjE2ODYxNjMxNDEuMC4wLjA." alt="" />
+        <div>
+
+            <div className={darkMode ? 'know-more-dark' : 'know-more'}  id='more'>
+                <div className="padding-left"> 
+                    <div className="email">
+                        <form action="" method="POST"  id="email-form">
+                            <input className='in' type="email" name="" id=""  placeholder='Email Address'/>
+                            <button>Subcribe</button>
+                        </form>
+                        <div className="email-success"></div>
+                    </div>
+                    <p>Don't want to miss out on new trends and products? Join wait-list</p>
                 </div>
-                <p style={{fontStyle: 'italic'}}>Kryptonig 2023. All right Reserved</p>
-                <div className="social-icons">
-                <a href="https://twitter.com/KryptonigLLC?s=09"> 
-                <FaTwitter/>
-                </a>
-               
-                <a href="https://www.linkedin.com/company/kryptonig-llc/">
-                <FaLinkedin/>
-                </a>
                 
+            </div>
+            <div className={darkMode ? 'footer-dark' : 'footer'}>
+                
+                <div className="first">
+                    <div className={darkMode ? "footer-logo-dark" : "footer-logo"}>
+                        Krypto<span>nig</span>
+                    </div>
+                    <p>Our NFT marketplace fill your experience with originality, creativity and value.</p>
+
                 </div>
+                <div className="others">
+                    <ul className='other-ul'>
+                        <li className='link-header'>
+                            About
+                        </li>
+                        <li>
+                            <NavLink exact to='#' className='other-link'>
+                                Product
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink exact to='#' className='other-link'>
+                                Resource
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink exact to='#' className='other-link'>
+                                Terms and Conditions
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink exact to='#' className='other-link'>
+                                FAQ
+                            </NavLink>
+                        </li>
+                    </ul>
+                    <ul className='other-ul'>
+
+                        <li className='link-header'>
+                            Company
+                        </li>
+                        <li>
+                            <NavLink exact to='#' className='other-link'>
+                                Our Team
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink exact to='#' className='other-link'>
+                                Partner with Us
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink exact to='#' className='other-link'>
+                                Privacy & Policy
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink exact to='#' className='other-link'>
+                                Features
+                            </NavLink>
+                        </li>
+                    </ul>
+                    <ul className='other-ul'>
+                        <li className='link-header'>
+                            Contact
+                        </li>
+                        <li >
+                            <NavLink className='other-link'>
+                            kryptonig@gmail.com
+                            </NavLink>
+                        </li>
+                        <div className="social-icons">
+                            <a href="https://twitter.com/KryptonigLLC?s=09"> 
+                            <FaTwitter/>
+                            </a>
+                        
+                            <a href="https://www.linkedin.com/company/kryptonig-llc/">
+                            <FaLinkedin/>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+                
             </div>
-            <div className="others">
-                <ul className='other-ul'>
-                <li>
-                        <NavLink exact to='/' className='other-link'>
-                            Home
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink exact to='/About' className='other-link'>
-                            About Us
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink exact to='/Service' className='other-link'>
-                            Services
-                        </NavLink>
-                    </li>
-                </ul>
-                <ul className='other-ul'>
-                <li>
-                        <NavLink exact to='/Nfts' className='other-link'>
-                            NFTs
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink exact to='/Invest' className='other-link'>
-                            Forum
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink exact to='/Blog' className='other-link'>
-                            Blog
-                        </NavLink>
-                    </li>
-                </ul>
-                <ul className='other-ul'>
-                <li>
-                        <NavLink exact to='/' className='other-link'>
-                            Terms and Conditions
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink exact to='/' className='other-link'>
-                            Privacy Policy
-                        </NavLink>
-                    </li>
-                </ul>
+            <div className={darkMode ? 'dark' : 'lighter'}>
+                <div className='horizontal-line'></div>
+                <p className='created1'>Created by <strong style={{color: '#FFFFFF'}}>Kryptonig</strong> | All Right Reserved 2023</p>
+            
+
             </div>
+            
         </div>
     )
 }

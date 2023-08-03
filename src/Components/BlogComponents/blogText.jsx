@@ -8,9 +8,9 @@ const BlogText = ({content}) => {
   return (
       <div>
         
-                <div className="content">
-                    {content}
-                </div>
+        <div className="content">
+          {content}
+        </div>
       
      </div> 
   );

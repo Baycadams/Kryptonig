@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap');
 
 .logo{
     width: 100px;
@@ -5,14 +6,29 @@
     object-fit: cover;
     object-position: center;
 }
-
+.lighten1 {
+    color: white;
+    cursor: pointer;
+    margin-left: 1%;
+}
+.lighten {
+    display: none;
+    cursor: pointer;
+}
 .nav-logo {
-    padding-top: 7px;
+    display: flex;
+    margin-left: -7%;
+    margin-right: 3%;
+    margin-bottom: 2%;
+}
+.nav-logo p {
+    font-size: 12px;
+    margin-top: 5%;
 }
 
 .nav-container{
     max-width: 100%;
-    
+    padding-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,61 +37,98 @@
     top: 0;
     right: 0;
     left: 0;
+
     z-index: 1;
-    border-bottom: 1px solid #F39333;
+    background: linear-gradient(154deg, rgba(217, 217, 217, 0.00) 0%, rgba(255, 186, 169, 0.33) 31.75%, rgba(163, 202, 248, 0.49) 60.89%, rgba(255, 235, 229, 0.00) 83.64%);
+
 }
+
+
+
 .none{
     display: none;
 }
 
 .uls{
+    background: linear-gradient(154deg, rgba(217, 217, 217, 0.00) 0%, rgba(255, 186, 169, 0.33) 31.75%, rgba(163, 202, 248, 0.49) 60.89%, rgba(255, 235, 229, 0.00) 83.64%);
     position: absolute;
-    top: 80px;
+    top: 52px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #0E5BA7;
     padding-bottom: 20px;
     height: auto;
     overflow: hidden;
     transition: 0.5s all ease-in-out;
+}
+
+
+.icon-iconic {
+    display: none;
+    cursor: pointer;
 }
 .mobile-none{
     display: none;
 }
 .uls li{
     margin-top: 20px;
-    color: #fff;
+    color: #000;
     width: 100%;
     transition: 0.5s all ease-in-out;
     text-align: center;
+
 }
 .uls li:hover{
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
 }
+
 .links{
-    color: #fff;
-    font-family: var(--font-familyone);
+    color: #000;
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 16px;
 }
+.links-dark{
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+ 
 .joinwish{
     
-    width: 150px;
+    width: 80px;
     text-align: center;
-    background-color: #0E5BA7;
+    border-radius: 10px;
+    background: linear-gradient(214deg, #F1765F 0%, #1478E5 100%);
     padding: 10px;
-    font-family: var(--font-familytwo);
     border: none;
-    margin-right: 40px;
+}
+
+.krypto-light {
+    font-family: 'Poppins';
+    color: #1f1f1f;
+    padding-top: 10px;
+    margin-left: -37px;
+    font-weight: 700;
+}
+.krypto-dark {
+    font-family: 'Poppins';
+    color: #fff;
+    padding-top: 10px;
+    margin-left: -37px;
+    font-weight: 700;
 }
 .Wish{
     color: #fff;
-    font-size: 12px;
-}
+    font-size: 8px;
 
+}
+.Wish p{
+    font-family: 'Poppins', sans-serif;
+}
 .menu-btn button{
     margin-top: -5px;
     font-size: 30px;
@@ -85,19 +138,43 @@
 }
 
 .icon00 {
-    color:#0E5BA7
+    color:#0E5BA7;
+    margin-top: 10px;
 }
 .icon00:hover {
     color: #F39333;
+}
+.icon-size {
+    width: 30px;
+    height: 30px;
 }
 
 .menu-btn button:hover{
     color: #F39333;
 }
-
+.iconic-icon {
+    cursor: pointer;
+    margin-left: 1%;
+}
 
 @media screen and (min-width:960px) {
 
+    .iconic-icon {
+        display: none;
+    }
+    .lighten1 {
+        display: none;
+        cursor: pointer;
+    }
+    .icon-iconic {
+        display: block;
+        cursor: pointer;
+    }
+    .lighten {
+        display: block;
+        color: white;
+        cursor: pointer;
+    } 
     .nav-container{
         padding: 10px;
     }
@@ -118,7 +195,12 @@
     .links{
         color: black;
         font-weight: 300;
-        font-size: 18px;
+        font-size: 13px;
+    }
+    .links-dark{
+        color: #fff;
+        font-weight: 300;
+        font-size: 13px;
     }
     .menu-btn{
         display: none;
@@ -133,6 +215,9 @@
     .Wish{
         font-size: 15px;
     }
+    .joinwish {
+        width: 150px;
+    }
 }
 
 @media screen  and (max-width: 280px) {
@@ -140,4 +225,29 @@
     .joinwish {
         display: none;
     }
+    .nav-logo {
+        display: flex;
+        margin-left: -10%;
+        margin-right: 3%;
+        margin-bottom: 2%;
+    }
+    .icon-size {
+        width: 20px;
+        height: 20px;
+    }
 }
+
+@media screen  and (max-width: 400px) {
+    
+    .Wish p {
+        font-size: 7px;
+    }
+}
+@media screen  and (min-width: 540px) {
+    
+   .nav-logo {
+    margin-left: -3.5%;
+    margin-top: 2%;
+}
+}
+

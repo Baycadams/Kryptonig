@@ -1,0 +1,189 @@
+
+.showroom {
+    background: linear-gradient(154deg, rgba(217, 217, 217, 0.00) 0%, rgba(255, 186, 169, 0.33) 31.75%, rgba(163, 202, 248, 0.49) 60.89%, rgba(255, 235, 229, 0.00) 83.64%);
+}
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+}
+.header-flex img { 
+    width: 200px;
+    height: 200px;
+}
+.showcase{
+    color: #1F1F1F;
+    font-family: "Poppins";
+    font-size: 22px;
+    margin-left: 10px;
+    margin-top: 5%;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+.showcase-dark{
+    font-family: "Poppins";
+    font-size: 22px;
+    margin-left: 10px;
+    margin-top: 5%;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    color: var(--dark-mode-white, #FFFAFA);
+}
+.flex-left {
+    width: 55%;
+}
+.flex-left-dark {
+    width: 55%;
+}
+.flex-left p {
+    color: rgba(31, 31, 31, 0.50);
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    margin-left: 10px;
+    line-height: 100%; /* 36px */
+    width: 90%;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+.flex-left-dark p {
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    margin-left: 10px;
+    line-height: 100%;
+    width: 90%;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    color: #F5F5F5;
+}
+.flex-left h4 {
+    border-radius: 10px;
+    background: linear-gradient(214deg, #F1765F 0%, #1478E5 100%);
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: #FFF;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+}
+.flex-left-dark h4 {
+    border-radius: 10px;
+    background: linear-gradient(214deg, #F1765F 0%, #1478E5 100%);
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: #FFF;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+}
+.foot-note-showroom {
+    display: flex;
+    justify-content: space-around;
+    width: 55%;
+    margin-top: 20px;
+    margin-bottom: 80px;
+
+}
+.foot-note-showroom-dark {
+    display: flex;
+    justify-content: space-around;
+    width: 55%;
+    margin-top: 20px;
+    margin-bottom: 80px;
+
+}
+
+.foot-note-showroom h2 {
+    display: flex;
+    justify-content: center;
+    color: #1F1F1F;
+    font-family: "Poppins";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+.foot-note-showroom-dark h2 {
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    color: var(--dark-mode-white, #FFFAFA);
+}
+.foot-note-showroom h3 {
+    display: flex;
+    justify-content: center;
+    color: rgba(31, 31, 31, 0.50);
+    font-family:"Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.foot-note-showroom-dark h3 {
+    display: flex;
+    justify-content: center;
+    font-family:"Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: rgba(245, 245, 245, 0.50);
+}
+@media screen and (min-width: 1024px) {
+    .showcase{
+        font-size: 45px;
+        margin-left: 50px;
+        margin-top: 5%;
+    }
+    .showcase-dark{
+        font-size: 45px;
+        margin-left: 50px;
+        margin-top: 5%;
+    }
+    .flex-left {
+        width: 45%;
+    }
+    .flex-left-dark {
+        width: 45%;
+    }
+    .header-flex img {
+        width: 25%;
+        height: 10%;
+        margin-right: 20%;
+    }
+    .flex-left p {
+        font-size: 18px;
+        margin-left: 57px;
+        width: 70%;
+
+    }
+    .flex-left-dark p {
+        font-size: 18px;
+        margin-left: 57px;
+        width: 70%;
+    }
+}

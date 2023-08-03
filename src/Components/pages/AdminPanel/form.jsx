@@ -1,5 +1,4 @@
-import React, { useState, useRef, useMemo } from 'react'
-import JoditEditor from 'jodit-react'
+import React, { useState, useRef} from 'react'
 import { db} from '../../../firebase'
 import {collection, addDoc} from 'firebase/firestore'
 import { getStorage, ref, uploadBytes, getDownloadURL} from 'firebase/storage'
@@ -87,25 +86,16 @@ const Form = ({title, content, editID, setEditID, setContent, editing, setEditin
                 
                 
                 <label> Blog body:</label>
-                {/* <textarea
-                style={{height: '250px', border: "2px solid blue"}}
-                placeholder='blog body'
-                type='text'
-                required
-                value={content}
-                onChange = {(e) => setContent(e.target.value)}/> */}
-                {/* <JoditEditor ref={editor} value={content} onChange={newContent =>setContent(newContent)}/> */}
-                <ReactQuill theme='snow' value={content} onChange={setContent} />
+                <ReactQuill theme='snow' value={content} onChange={setContent} className='editor-text' />
                 
-                <label> Author:</label>
-                <select
+                <label style={{marginTop: '50px'}}> Author:</label>
+                <input
                 required
                 value={author}
                 style={{border: "2px solid blue"}}
-                onChange = {(e) => setAuthor(e.target.value)}>
-                    <option>Adams Nwokedi</option>
-                    <option>Sobechi Savictor Evans-Ibe</option>
-                </select>
+                maxLength='10'
+                onChange = {(e) => setAuthor(e.target.value)}/>
+                
                 <input className='hug' accept='image/*' type="file" onChange={handleImageUpload} style={{border: "2px solid blue"}} />
 
                 <label htmlFor="start">Date</label>

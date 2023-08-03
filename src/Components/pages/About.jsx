@@ -5,16 +5,22 @@ import More from '../more';
 import Logo from '../Logo';
 import Footer from '../Footer';
 import Navbar from '../Navbar';
+import { useState } from 'react';
 
 const About = ()=>{
+    const [darkMode, setDarkMode] = useState(false)
+    let backgroundd = 'light'
+    if (darkMode) {
+         backgroundd = 'dark'
+    } else {backgroundd = 'light'}
     return(
-        <div>
-            <Navbar/>
-            <Phone/>
-            <Dream/>
-            <More/>
-            <Logo/>
-            <Footer/>
+        <div className={backgroundd}>
+            <Navbar darkMode={darkMode} setDarkMode={setDarkMode}/>
+            <Phone darkMode = {darkMode}/>
+            <Dream darkMode={darkMode}/>
+            <More darkMode={darkMode}/>
+            <Logo darkMode={darkMode}/>
+            <Footer darkMode={darkMode}/>
         </div>
 
     )

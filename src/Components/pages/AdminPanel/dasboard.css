@@ -50,3 +50,8 @@ width: 120px; height: 40px; cursor: pointer; }
     border: 2px solid red;
     border-radius: 5px;
 }
+.editor-text {
+    height: 300px;
+    width: 50%;
+    margin: 0 auto;
+}

@@ -2,80 +2,100 @@ import React from 'react';
 import './Home.css'
 import { useState, useEffect } from 'react'
 import data from './ProjectsData'
-import { FaCircle } from 'react-icons/fa';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css'
 
+const Projects = ({darkMode})=>{
 
-
-
-const Projects = ()=>{
-    const [project, setProject] = useState(data)
-    const [index, setIndex] = React.useState(0)
-
-      useEffect(() => {
-        let slider = setInterval(() => {
-          setIndex((oldIndex) => {
-            let index = oldIndex + 1
-            if (index > project.length - 1) {
-              index = 0
-            }
-            return index
-          })
-        }, 5000)
-        return () => {
-          clearInterval(slider)
+    const responsive = {
+        superLargeDesktop: {
+          // the naming can be any, depends on you.
+          breakpoint: { max: 4000, min: 3000 },
+          items: 5
+        },
+        desktop: {
+          breakpoint: { max: 3000, min: 980 },
+          items: 3
+        },
+        tablet: {
+          breakpoint: { max: 980, min: 464 },
+          items: 2
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1
         }
-      }, [index])    
+      };
+
+
+    const [project, setProject] = useState(data)
 
     return(
-       <div className="projects">
-           <h3>Projects on our Radar</h3>
-           <div className="section-center">
-                {project.map((item, itemIndex)=> {
-                    const {id, head, image, body, button} = item
+       <div style={{marginLeft: "40px", marginBottom: "50px"}}>
+        <h3 className={darkMode? 'project-radar-dark' : 'project-radar' }>Projects on our Radar</h3>
+           <p className={darkMode ? 'projects-p-dark' : 'projects-p'}>We have captured some of the most rewarding projects that will interest you</p>
+           <div style={{margin: '0 auto', width: "100%"}}>
+           <Carousel responsive={responsive}>
+           <li className="project-cards">
+                <img src="https://firebasestorage.googleapis.com/v0/b/kryptonig.appspot.com/o/websiteBlog%2FScreenshot%20(248)%201.png?alt=media&token=a0ddb551-6628-4407-91d2-68940303432bg" alt="" />
+                <div style={{display: 'flex', justifyContent: 'space-between', width: '100%'}}>
+                    <div style={{marginLeft: "25px"}}>
+                        <p className={darkMode ? "project-username-dark" : "project-username"}>@Johny</p>
+                        <p className={darkMode ? "project-topic-dark" : "project-topic"}>Yellow Painting</p>
+                    </div>
+                    <div style={{marginRight: "25px", textAlign: "right"}}>
+                        <p className={darkMode ? "project-username-dark" : "project-username"} >Current Bid</p>
+                        <p className={darkMode ? "project-topic-dark" : "project-topic"} >0.003ETH</p>
+                    </div>
+                </div>
+                <p className={darkMode? "project-body-text-dark" : "project-body-text"}>Creating art with light and shade, also known as chiaroscour,add an extra dimension to the work. it helps the viewers eyes</p>
+            </li>
+            <li className="project-cards">
+                <img src="https://firebasestorage.googleapis.com/v0/b/kryptonig.appspot.com/o/websiteBlog%2FScreenshot%20(248)%201.png?alt=media&token=a0ddb551-6628-4407-91d2-68940303432b" alt="" />
+                <div style={{display: 'flex', justifyContent: 'space-between', width: '100%'}}>
+                    <div style={{marginLeft: "25px"}}>
+                        <p className={darkMode ? "project-username-dark" : "project-username"}>@Johny</p>
+                        <p className={darkMode ? "project-topic-dark" : "project-topic"}>Yellow Painting</p>
+                    </div>
+                    <div style={{marginRight: "25px", textAlign: "right"}}>
+                        <p className={darkMode ? "project-username-dark" : "project-username"} >Current Bid</p>
+                        <p className={darkMode ? "project-topic-dark" : "project-topic"} >0.003ETH</p>
+                    </div>
+                </div>
+                <p className={darkMode? "project-body-text-dark" : "project-body-text"}>Creating art with light and shade, also known as chiaroscour,add an extra dimension to the work. it helps the viewers eyes</p>
+            </li>
+            <li className="project-cards">
+                <img src="https://firebasestorage.googleapis.com/v0/b/kryptonig.appspot.com/o/websiteBlog%2FScreenshot%20(248)%201.png?alt=media&token=a0ddb551-6628-4407-91d2-68940303432b" alt="" />
+                <div style={{display: 'flex', justifyContent: 'space-between', width: '100%'}}>
+                    <div style={{marginLeft: "25px"}}>
+                        <p className={darkMode ? "project-username-dark" : "project-username"}>@Johny</p>
+                        <p className={darkMode ? "project-topic-dark" : "project-topic"}>Yellow Painting</p>
+                    </div>
+                    <div style={{marginRight: "25px", textAlign: "right"}}>
+                        <p className={darkMode ? "project-username-dark" : "project-username"} >Current Bid</p>
+                        <p className={darkMode ? "project-topic-dark" : "project-topic"} >0.003ETH</p>
+                    </div>
+                </div>
+                <p className={darkMode? "project-body-text-dark" : "project-body-text"}>Creating art with light and shade, also known as chiaroscour,add an extra dimension to the work. it helps the viewers eyes</p>
+            </li>
+            <li className="project-cards">
+                <img src="https://firebasestorage.googleapis.com/v0/b/kryptonig.appspot.com/o/websiteBlog%2FScreenshot%20(248)%201.png?alt=media&token=a0ddb551-6628-4407-91d2-68940303432b" alt="" />
+                <div style={{display: 'flex', justifyContent: 'space-between', width: '100%'}}>
+                    <div style={{marginLeft: "25px"}}> 
+                        <p className={darkMode ? "project-username-dark" : "project-username"}>@Johny</p>
+                        <p className={darkMode ? "project-topic-dark" : "project-topic"}>Yellow Painting</p>
+                    </div>
+                    <div style={{marginRight: "25px", textAlign: "right"}}>
+                        <p className={darkMode ? "project-username-dark" : "project-username"} >Current Bid</p>
+                        <p className={darkMode ? "project-topic-dark" : "project-topic"} >0.003ETH</p>
+                    </div>
+                </div>
+                <p className={darkMode? "project-body-text-dark" : "project-body-text"}>Creating art with light and shade, also known as chiaroscour,add an extra dimension to the work. it helps the viewers eyes</p>
+            </li>
+            </Carousel>
+        </div>
+           
 
-                    let position = 'nextSlide'
-                        if (itemIndex === index) {
-                            position = 'activeSlide'
-                        }
-                        if (
-                            itemIndex === index - 1 ||
-                            (index === 0 && itemIndex === project.length - 1)
-                        ) {
-                            position = 'lastSlide'
-                        }
-
-                    return (
-                        <article className={position} style={{display: "flex", justifyContent: "center"}} key={id}>
-                            <div className='div'>
-                                <img style={{height: "55%", width: "100%", display: "flex", justifyContent: "center"}} src={image} alt="" />
-                                <h5>{head}</h5>
-                                <h6>{body}</h6>
-                                <p>{button}</p>
-                            </div>
-                        </article>
-                    )
-                })}
-
-            </div>
-
-            <div className="dot-center1">
-                
-
-                {project.map((item, itemIndex)=> {
-                    const {id} = item
-
-                    let colour = 'grey'
-                        if (itemIndex === index) {
-                            colour = '#F39333'
-                        }
-
-                    return (
-                        <div className='dots1' key={id}>
-                            <FaCircle style={{width: "120px", height: "120px"}} color={colour} />
-                        </div>
-                    )
-                })}
-            </div>
        </div>
     )
 }

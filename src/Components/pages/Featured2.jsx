@@ -7,20 +7,20 @@ import More from '../more';
 import Footer from '../Footer';
 import Logo from '../Logo';
 import Navbar from '../Navbar';
+import BlogDetails from '../BlogDetails';
 
 
 const Featured2 = ()=>{
 
     return(
         <div>
-            {/* <Navbar/>
-            <Feat/>
-            <BlogDetails2/>
+            <Navbar/>
+            <BlogDetails/>
             <PostText2/>
             <Comment/>
             <More/>
             <Logo/>
-            <Footer/> */}
+            <Footer/>
         </div>
     )
 }

@@ -3,31 +3,36 @@ import React from 'react';
 
 import './Blog.css'
 
-const BlogPost = (props) => {
-  return (
-      <div>
+const BlogPost = ({darkMode, blogImg, publish, date, tittle, content, crypto,tech}) => {
+
+    
+  return ( 
+ 
+    <div>
         <div className="blog-post">
             <div className="blogImg">
-                <img src={props.blogImg} alt="" />
+                <img src={blogImg} alt="" />
             </div>
             <div className="textPlace">
-                <div className="date-publish2">
-                    <span>{props.publish}</span>
-                    <span>{props.date}</span>
+                <div className={darkMode ? "date-publish2-dark" : "date-publish2"}>
+                    <span>{publish}, {date}</span>
+                    <span>5mins read</span>
                 </div>
-                <div className="tittle">
-                    {props.tittle}
+                <div className={darkMode ? "tittle-dark" : "tittle"}>
+                    {tittle}
                 </div>
-                <div className="content">
-                    {props.content}
+                <div className={darkMode ? "content-dark" : "content"}>
+                    {content}
                 </div>
                 <div className="ct">
-                    <span>{props.crypto}</span>
-                    <span>{props.tech}</span>
+                    <span>{crypto}</span>
+                    <span>{tech}</span>
                 </div>
             </div>
-      </div>
-     </div> 
+        </div>
+
+
+    </div> 
   );
 }
 
