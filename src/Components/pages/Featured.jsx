@@ -2,18 +2,16 @@ import React, { useEffect, useState } from 'react';
 import BlogDetails from '../BlogDetails'
 import PostText from '../Post-text';
 import Comment from '../Comment';
-import More from '../more';
-import Logo from '../Logo';
 import Footer from '../Footer';
 import Navbar from '../Navbar';
-import { useParams } from 'react-router-dom';
-import { doc, getDoc } from 'firebase/firestore';
-import { db } from '../../firebase';
-import { format, formatDistance } from 'date-fns';
 import HomeBlog from '../homeBlog';
+import ReactGA from 'react-ga4';
 
 const Featured = ()=>{
 
+    useEffect(() => {
+        ReactGA.send({hitType: "pageview", page: window.location.pathname + window.location.search, title: 'BlogPost Page'})
+   }, [])
     const [darkMode, setDarkMode] = useState(false)
     let backgroundd = 'light'
     if (darkMode) {

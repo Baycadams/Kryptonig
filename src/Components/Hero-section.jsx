@@ -27,13 +27,16 @@ const Hero = ({darkMode})=>{
                     <div className='left-wing'>
                         <h3 className={darkMode? "unlocking-dark" : "unlocking"}>Unlock The Creator Economy</h3>
                         <p className={darkMode ? "para-dark" : "para"}>
-                        Get access to greater funding, promote your project and learn from our community with DAO liquidity pool and contribute to earn model 
+                        With our all new contribute-to-earn model, Find and fund live projects showcased by millions of creators globally
                         </p>
                         <div className="cont">
                             <div className="explore-now-container">
                                 <HashLink to='#more' className='explore-now-btn'>
                                     <p>Explore Now</p> 
                                 </HashLink>
+                                <Link to='https://www.linkedin.com/company/kryptonig-llc/' className='explore-now-btn'>
+                                    <p>Contact Us</p> 
+                                </Link>
                             </div>
                             {/* <Link to="https://www.linkedin.com/company/kryptonig-llc/">
                                 <button className={darkMode? ' non-btn-dark' : ' non-btn'}>Contact Us</button>

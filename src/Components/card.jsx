@@ -13,7 +13,7 @@ const Card = ({images, darkMode}) => {
             </div>
             <div>
               <p className={darkMode ? "current-price-dark" : "current-price"}>current price</p>
-              <p className={darkMode ? "eth-price-dark" : "eth-price"}>0.005 ETH</p>
+              <p dir='rtl' className={darkMode ? "eth-price-dark" : "eth-price"}>0.005ETH</p>
             </div>
           </div>
           <p className={darkMode ? 'lorem-ipsum1-dark': 'lorem-ipsum1'}>Lorem ipsum dolor, sit amet consectetur adipisicing. Exercitationem necessitatibus.</p>

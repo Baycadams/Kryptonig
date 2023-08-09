@@ -189,6 +189,19 @@
 .project-title-dark {
     color: var(--dark-mode-white, #FFFAFA);
 }
+.buy-btn-nft {
+    width: 100%;
+    padding: 5px;
+    background: linear-gradient(214deg, #F1765F 0%, #7D9EC4 100%);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    color: white;
+    font-family: 'poppins';
+    font-size: 12px ;
+}
+
 
 @media screen and (width: 360px) {
     .photography {
@@ -259,7 +272,6 @@
         width: 180px;
     }
  }
-
 
  @media screen  and (width:280px) {
     .photography {

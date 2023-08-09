@@ -1,5 +1,6 @@
 import React from 'react'
 import './NFTHeader.css'
+import { Link } from 'react-router-dom'
 
 const NFTHeader = ({darkMode}) => {
   return (
@@ -7,12 +8,13 @@ const NFTHeader = ({darkMode}) => {
       <div className="nft-header">
         <div className={darkMode ? "section1-dark" : "section1"}>
           <h3>
-          The Easiest Way To Create, Sell & Collect Your Own Creative NFT
+          The Easiest Way To Contribute And Earn True Rewards, Instantly! 
           </h3>
           <p>
-          Showcase your projects to a large and secure community of investors and contributors
+          Web3 is all about creator support. Discover rewards that give you access to more opportunities in your preferred industr
           </p>
-          <h5>Explore Now</h5>
+          <Link to="https://opensea.io/kryptonig"><h5>Explore Now</h5></Link>
+          
         </div>
         <div className="image">
           <img src='https://firebasestorage.googleapis.com/v0/b/kryptonig.appspot.com/o/heroimage.png?alt=media&token=fd3fc9b5-bcf3-48a1-a776-8c636e50e812' alt="" />
@@ -21,10 +23,10 @@ const NFTHeader = ({darkMode}) => {
 
       <div>
         <h3 className={darkMode ? "why-us-dark": "why-us"}>
-          Why Us 
+        The Why? 
         </h3>
         <p className={darkMode? "kryptonig-text-dark" : "kryptonig-text"}>
-        Kryptonig brings solutions that bring an end to creator’s dilemma
+        By returning value, we are bringing an end to the creator’s dilemma - One Person! One creator! One contributor! One Reward!
         </p>
       </div>
       <div className="get-popular-nft">

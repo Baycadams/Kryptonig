@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Slider from '../BlogComponents/Slider';
 import Blogs from '../BlogComponents/blogposts';
 import Footer from '../Footer';
@@ -6,9 +6,14 @@ import Navbar from '../Navbar';
 import '../BlogComponents/Blog.css'
 import { useState } from 'react';
 import CarouselSlide from '../Carousel';
+import ReactGA from 'react-ga4';
 
 
 const Blog = ()=>{
+
+    useEffect(() => {
+        ReactGA.send({hitType: "pageview", page: window.location.pathname + window.location.search, title: 'Blog Page'})
+   }, [])
     const [darkMode, setDarkMode] = useState(false)
     let backgroundd = 'light'
     if (darkMode) {

@@ -34,7 +34,7 @@ const FeaturedArtworks = ({darkMode}) => {
           <h5 className="get-started">Get Started</h5>
           <div className="padding"></div>
         </div>
-        <div className="space"></div>
+        <div className="space"></div> 
     </div>
   )
 }

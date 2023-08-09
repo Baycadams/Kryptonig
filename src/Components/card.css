@@ -20,7 +20,7 @@
 .taggs {
     color: rgba(31, 31, 31, 0.50);
     font-family: "Poppins";
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -29,7 +29,7 @@
 .taggs-dark {
     color: rgba(245, 245, 245, 0.50);
     font-family: "Poppins";
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -38,7 +38,7 @@
 .yellow-painting {
     color: var(--text-colour-black, #1F1F1F);
     font-family: "Poppins";
-    font-size: 16px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -47,7 +47,7 @@
 .yellow-painting-dark {
     color: var(--dark-mode-white, #FFFAFA);
     font-family: "Poppins";
-    font-size: 16px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -74,7 +74,7 @@
 .eth-price {
     color: var(--text-colour-black, #1F1F1F);
     font-family: "Poppins";
-    font-size: 16px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -84,7 +84,7 @@
 .eth-price-dark {
     color: var(--dark-mode-white, #FFFAFA);
     font-family: "Poppins";
-    font-size: 16px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -94,9 +94,9 @@
     color: rgba(31, 31, 31, 0.50);
     text-align: justify;
     font-family: "Open Sans";
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 150%; /* 30px */
     letter-spacing: -0.2px;
     margin-top: 10px;
@@ -107,9 +107,9 @@
     color: rgba(245, 245, 245, 0.50);
     text-align: justify;
     font-family: "Open Sans";
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 150%; /* 30px */
     letter-spacing: -0.2px;
     margin-top: 10px;

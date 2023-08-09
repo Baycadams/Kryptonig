@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Phone from '../phone';
 import Dream from '../dream';
 import More from '../more';
@@ -6,8 +6,13 @@ import Logo from '../Logo';
 import Footer from '../Footer';
 import Navbar from '../Navbar';
 import { useState } from 'react';
+import ReactGA from 'react-ga4';
+
 
 const About = ()=>{
+    useEffect(() => {
+        ReactGA.send({hitType: "pageview", page: window.location.pathname + window.location.search, title: 'About Page'})
+   }, [])
     const [darkMode, setDarkMode] = useState(false)
     let backgroundd = 'light'
     if (darkMode) {

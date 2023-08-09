@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../Navbar'
 import ShowroomHead from '../ShowroomHead'
 import { useState } from 'react'
 import LandingPageText from '../LandingPageText'
 import NewProject from '../NewProject'
 import Footer from '../Footer'
+import ReactGA from 'react-ga4';
 
 const ShowroomLandingPage = () => {
+
+  useEffect(() => {
+    ReactGA.send({hitType: "pageview", page: window.location.pathname + window.location.search, title: 'NFT Showroom Landing Page'})
+}, [])
+
     const [darkMode, setDarkMode] = useState(false)
     let backgroundd = 'light'
     if (darkMode) {

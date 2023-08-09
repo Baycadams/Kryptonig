@@ -2,12 +2,18 @@ import { collection, onSnapshot } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import { db } from '../firebase'
 import { Link } from 'react-router-dom'
+import ReactGA from 'react-ga4';
 
 
 
 const HomeBlog = ({darkMode}) => {
    
-
+    const handleGA = (title) => {
+        ReactGA.event({
+            category: 'homepage blog',
+            value: title
+        })
+    }
     const [websiteBlog, setWebsiteBlog] = useState([])
 
     useEffect(()=>{
@@ -27,7 +33,7 @@ const HomeBlog = ({darkMode}) => {
         <div className="container">
             {websiteBlog.map((blog)=> {
                 const {id, imageURL, title} = blog
-                return <section key={id} className="sect">
+                return <section key={id} onClick={() => handleGA(title)} className="sect">
                     <Link to={`/blog/${id}`}>
                         <img src={imageURL} alt="" className="photograph" />
                         <div className="flexes">

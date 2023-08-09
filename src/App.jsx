@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css'
 import Home from './Components/pages/Home';
 import About from './Components/pages/About';
@@ -15,10 +15,16 @@ import AddBlog from './Components/pages/AdminPanel/AddBlog';
 import Featured2 from './Components/pages/Featured2';
 import Showroom from './Components/pages/Showroom';
 import ShowroomLandingPage from './Components/pages/ShowroomLandingPage';
+import ReactGA from 'react-ga4';
+
+const TRACKING_ID = "G-WJFPXE888Z";
+ReactGA.initialize(TRACKING_ID);
 
 
 function App() {
-  const [title, setTitle] = useState('')
+
+
+    const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
     const [author, setAuthor] = useState('')
     const [image, setImage] = useState('')
