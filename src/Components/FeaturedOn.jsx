@@ -7,9 +7,12 @@ const FeaturedOn = ({darkMode}) => {
     <div>
       <div className='featured-on'>
         <p className="featured-header">Featured On</p>
-        <p className="body-text">Creative talents- Digital Magazines NFT</p>
-        <p className="body-text">Project76 ZoomQuilt</p>
-        <p className="readMore">Read more</p>
+          <div className="featured-on-flex">
+            <p className="body-text">Creative talents</p>
+            <p className="body-text">Digital Magazines</p>
+            <p className="body-text">NFT Project76</p>
+            <p className="body-text">ZoomQuilt</p>
+          </div>
       </div>
 
       <div className={darkMode ? "faq-dark" : "faq"}>

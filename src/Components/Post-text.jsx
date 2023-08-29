@@ -14,7 +14,7 @@ const PostText = ({darkMode})=>{
     const [websiteBlog, setWebsiteBlog] = useState({})
     const [filtered, setFiltered] = useState([])
 
-    const {id} = useParams();
+    const { id} = useParams();
     useEffect(()=>{
 
         onSnapshot(collection(db, 'websiteBlog'), (snapshot) => {
@@ -36,11 +36,11 @@ const PostText = ({darkMode})=>{
         <div>
             <p className={darkMode ? 'blog-post-text-dark' : 'blog-post-text'}  dangerouslySetInnerHTML={{__html:websiteBlog.body}}/>
             <div className='related-article'>
-                <p className='related'>Related Article</p>
+                <p className={darkMode ? 'related-dark' : 'related'}>Related Article</p>
                 {filtered.map((item)=> {
                     const {id: currentID} = item
                     let display= 'display-on'
-                    if(id === currentID) {
+                    if(id === currentID) { 
                         display = 'display-off'
                     }
                     return <Link to='#' className={display} key={currentID}>

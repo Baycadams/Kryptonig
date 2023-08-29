@@ -13,7 +13,7 @@
 .showcase{
     color: #1F1F1F;
     font-family: "Poppins";
-    font-size: 22px;
+    font-size: 20px;
     margin-left: 10px;
     margin-top: 5%;
     font-style: normal;
@@ -22,7 +22,7 @@
 }
 .showcase-dark{
     font-family: "Poppins";
-    font-size: 22px;
+    font-size: 20px;
     margin-left: 10px;
     margin-top: 5%;
     font-style: normal;
@@ -39,7 +39,8 @@
 .flex-left p {
     color: rgba(31, 31, 31, 0.50);
     font-family: "Poppins";
-    font-size: 16px;
+    justify-content: left;
+    font-size: 11px;
     font-style: normal;
     font-weight: 500;
     margin-left: 10px;
@@ -50,7 +51,8 @@
 }
 .flex-left-dark p {
     font-family: "Poppins";
-    font-size: 16px;
+    font-size: 11px;
+    justify-content: left;
     font-style: normal;
     font-weight: 500;
     margin-left: 10px;
@@ -63,15 +65,16 @@
 .flex-left h4 {
     border-radius: 10px;
     background: linear-gradient(214deg, #F1765F 0%, #1478E5 100%);
-    width: 150px;
-    height: 40px;
+    width: 90px;
+    height: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin-top: -30px;
+    margin-left: 10px;
     color: #FFF;
     font-family: "Poppins";
-    font-size: 14px;
+    font-size: 8px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -80,15 +83,16 @@
 .flex-left-dark h4 {
     border-radius: 10px;
     background: linear-gradient(214deg, #F1765F 0%, #1478E5 100%);
-    width: 150px;
-    height: 40px;
+    width: 90px;
+    height: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin-top: -30px;
+    margin-left: 10px;
     color: #FFF;
     font-family: "Poppins";
-    font-size: 14px;
+    font-size: 8px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -116,7 +120,7 @@
     justify-content: center;
     color: #1F1F1F;
     font-family: "Poppins";
-    font-size: 22px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -126,7 +130,7 @@
     display: flex;
     justify-content: center;
     font-family: "Poppins";
-    font-size: 22px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -138,7 +142,7 @@
     justify-content: center;
     color: rgba(31, 31, 31, 0.50);
     font-family:"Poppins";
-    font-size: 16px;
+    font-size: 9px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -147,20 +151,81 @@
     display: flex;
     justify-content: center;
     font-family:"Poppins";
-    font-size: 16px;
+    font-size: 9px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     color: rgba(245, 245, 245, 0.50);
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 760px) {
     .showcase{
-        font-size: 45px;
+        font-size: 32px;
         margin-left: 50px;
         margin-top: 5%;
     }
     .showcase-dark{
-        font-size: 45px;
+        font-size: 32px;
+        margin-left: 50px;
+        margin-top: 5%;
+    }
+    .flex-left p {
+        font-size: 18px;
+        margin-left: 57px;
+        width: 80%;
+
+    }
+    .flex-left-dark p {
+        font-size: 18px;
+        margin-left: 57px;
+        width: 80%;
+    }
+    .flex-left h4 {
+        width: 100px;
+        height: 35px;
+        margin-top: -20px;
+        margin-left: 57px;
+        font-size: 11px;
+    }
+    .flex-left-dark h4 {
+        width: 100px;
+        height: 35px;
+        margin-top: -20px;
+        margin-left: 57px;
+        font-size: 11px;
+    }
+    .foot-note-showroom h2 {
+        font-size: 18px;
+    }
+    .foot-note-showroom-dark h2 {
+        font-size: 18px;
+    }
+    .foot-note-showroom h3 {
+        font-size: 12px;
+    }
+    .foot-note-showroom-dark h3 {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .flex-left h4 {
+        width: 150px;
+        height: 40px;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+    .flex-left-dark h4 {
+        width: 150px;
+        height: 40px;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+    .showcase{
+        font-size: 40px;
+        margin-left: 50px;
+        margin-top: 5%;
+    }
+    .showcase-dark{
+        font-size: 40px;
         margin-left: 50px;
         margin-top: 5%;
     }
@@ -176,14 +241,27 @@
         margin-right: 20%;
     }
     .flex-left p {
-        font-size: 18px;
+        font-size: 22px;
         margin-left: 57px;
-        width: 70%;
+        width: 80%;
 
     }
     .flex-left-dark p {
-        font-size: 18px;
+        font-size: 22px;
         margin-left: 57px;
-        width: 70%;
+        width: 80%;
     }
+    
+.foot-note-showroom h2 {
+    font-size: 22px;
+}
+.foot-note-showroom-dark h2 {
+    font-size: 22px;
+}
+.foot-note-showroom h3 {
+    font-size: 16px;
+}
+.foot-note-showroom-dark h3 {
+    font-size: 16px;
+}
 }

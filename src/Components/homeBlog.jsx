@@ -34,7 +34,7 @@ const HomeBlog = ({darkMode}) => {
             {websiteBlog.map((blog)=> {
                 const {id, imageURL, title} = blog
                 return <section key={id} onClick={() => handleGA(title)} className="sect">
-                    <Link to={`/blog/${id}`}>
+                    <Link to={`/blog/${title}/${id}`}>
                         <img src={imageURL} alt="" className="photograph" />
                         <div className="flexes">
                             <h3 className={darkMode ? 'title00-dark' : 'title00'}>{title}</h3>

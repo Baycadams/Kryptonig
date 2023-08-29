@@ -10,14 +10,18 @@ import ReactGA from 'react-ga4';
 
 
 const About = ()=>{
+
     useEffect(() => {
         ReactGA.send({hitType: "pageview", page: window.location.pathname + window.location.search, title: 'About Page'})
+   }, [])
+   useEffect(()=> {
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
    }, [])
     const [darkMode, setDarkMode] = useState(false)
     let backgroundd = 'light'
     if (darkMode) {
          backgroundd = 'dark'
-    } else {backgroundd = 'light'}
+    } else {backgroundd = 'light'} 
     return(
         <div className={backgroundd}>
             <Navbar darkMode={darkMode} setDarkMode={setDarkMode}/>

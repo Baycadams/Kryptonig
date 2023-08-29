@@ -14,6 +14,9 @@ const Home = ()=>{
      useEffect(() => {
           ReactGA.send({hitType: "pageview", page: window.location.pathname + window.location.search, title: 'Home Page'})
      }, [])
+     useEffect(()=> {
+          window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
+     }, [])
     const [darkMode, setDarkMode] = useState(false)
     let backgroundd = 'light'
     if (darkMode) {
@@ -21,7 +24,7 @@ const Home = ()=>{
     } else {backgroundd = 'light'}
     return(  
        <div className={`section ${backgroundd}`}> 
-            <Navbar darkMode={darkMode} setDarkMode={setDarkMode}/>
+            <Navbar darkMode={darkMode} setDarkMode={setDarkMode}/> 
             <Hero darkMode= {darkMode}/>
             <Projects darkMode= {darkMode}/>
             <Play darkMode= {darkMode}/>

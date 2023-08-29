@@ -2,27 +2,28 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import './Home.css'
 import { HashLink } from 'react-router-hash-link';
+import Facts from './Facts';
 
 
 const Hero = ({darkMode})=>{
     const note = [
         { 
-            title: '37k+',
-            body: 'Artworks'
+            title: '$104B+', 
+            body: 'Market Size'
         },
         {
-            title: '20k+',
-            body: 'Artists'
+            title: '50M+',
+            body: 'People'
         },
         {
-            title: '99k+',
-            body: 'Auctions'
+            title: '450K+',
+            body: 'Creators'
         }
     ]
 
     return(
         <div>
-            <div className={darkMode ? "Hero-section-dark" : "Hero-section"}>
+            <div className={darkMode ? "Hero-section-dark" : "Hero-section"}> 
                 <section className="header-container">
                     <div className='left-wing'>
                         <h3 className={darkMode? "unlocking-dark" : "unlocking"}>Unlock The Creator Economy</h3>
@@ -71,7 +72,7 @@ const Hero = ({darkMode})=>{
                 </div>  
  
             </div>
-
+            <Facts darkMode = {darkMode} />
 
             <div className={darkMode ? "offer-dark" : "offer"}>
                 <h3>The Kryptonig Offer</h3>

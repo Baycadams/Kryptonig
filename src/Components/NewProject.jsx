@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom'
 const NewProject = ({darkMode}) => {
     const navigate = useNavigate()
     const handleClick = () => {
-        navigate('/showroom-landing-page')
+        navigate('#')
     }
 
     const tag = [
@@ -57,7 +57,7 @@ const NewProject = ({darkMode}) => {
                 return <div className='item-tag' key={item.id}>
                     <p onClick={()=> setTagIndex(index)} className={`grey ${tagIndex === index  && 'gradient'}`}>{item.title}</p>
                 </div>
-            })}
+            })} 
         </div>
 
 
@@ -98,30 +98,32 @@ const NewProject = ({darkMode}) => {
                 })}
 
             </div>
+                <div className="margin-top-mobile">
+                <div className="dot-center1 center">
+            
+                    {project.map((item, itemIndex)=> {
+                        const {id} = item
 
-            <div className="dot-center1 center">
-                
+                        let colour = 'grey'
+                            if (itemIndex === index) {
+                                colour = '#F39333'
+                            }
 
-                {project.map((item, itemIndex)=> {
-                    const {id} = item
-
-                    let colour = 'grey'
-                        if (itemIndex === index) {
-                            colour = '#F39333'
-                        }
-
-                    return (
-                        <div className='dots1' key={id}>
-                            <FaCircle style={{width: "120px", height: "120px"}} color={colour} />
-                        </div>
-                    )
-                })}
-            </div>
+                        return (
+                            <div className='dots1' key={id}>
+                                <FaCircle style={{width: "120px", height: "120px"}} color={colour} />
+                            </div>
+                        )
+                    })}
+                </div>
+                </div>
+            
 
             <div className="promote">
                 <h3>Our Community promotes like minded investors & Creators</h3>
                 <p>Join Community</p>
             </div>
+            
     </div>
   )
 }

@@ -16,6 +16,7 @@ import Featured2 from './Components/pages/Featured2';
 import Showroom from './Components/pages/Showroom';
 import ShowroomLandingPage from './Components/pages/ShowroomLandingPage';
 import ReactGA from 'react-ga4';
+import CreateBlog from './Components/pages/CreateBlog';
 
 const TRACKING_ID = "G-WJFPXE888Z";
 ReactGA.initialize(TRACKING_ID);
@@ -52,8 +53,9 @@ function App() {
           <Route exact  path='/blog' Component={Blog}></Route>
           <Route exact  path='/showroom' Component={Showroom}></Route>
           <Route exact  path='/wishlist' Component={Wishlist}></Route>
-          <Route exact  path='/blog/:id' Component={Featured}></Route>
+          <Route exact  path='/blog/:title/:id' Component={Featured}></Route>
           <Route exact  path='/showroom-landing-page' Component={ShowroomLandingPage}></Route>
+          <Route exact  path='/create-blog-post' element={<CreateBlog content={content } editID={editID} setEditID = { setEditID} setContent = {setContent} title={title} setTitle={setTitle} body={body} setBody={setBody} author={author} setAuthor={setAuthor} image={image} setImage={setImage} link={link} setLink={setLink} date={date} setDate={setDate} tag1={tag1} setTag1={setTag1} tag2={tag2} setTag2={setTag2} editing={editing} setEditing={setEditing} />}></Route>
           <Route exact path='/adminpanel/home'  element={<AdminHome content={content } editID={editID} setEditID = { setEditID} setContent = {setContent} title={title} setTitle={setTitle} body={body} setBody={setBody} author={author} setAuthor={setAuthor} image={image} setImage={setImage} link={link} setLink={setLink} date={date} setDate={setDate} tag1={tag1} setTag1={setTag1} tag2={tag2} setTag2={setTag2} editing={editing} setEditing={setEditing}/>}></Route>
           <Route exact path='/addblog' element={<AddBlog content={content } editID={editID} setEditID = { setEditID} setContent = {setContent} title={title} setTitle={setTitle} body={body} setBody={setBody} author={author} setAuthor={setAuthor} image={image} setImage={setImage} link={link} setLink={setLink} date={date} setDate={setDate} tag1={tag1} setTag1={setTag1} tag2={tag2} setTag2={setTag2} editing={editing} setEditing={setEditing} />}></Route>
 

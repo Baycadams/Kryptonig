@@ -7,6 +7,7 @@ import '../BlogComponents/Blog.css'
 import { useState } from 'react';
 import CarouselSlide from '../Carousel';
 import ReactGA from 'react-ga4';
+import BlogHeader from '../BlogHeader';
 
 
 const Blog = ()=>{
@@ -14,6 +15,10 @@ const Blog = ()=>{
     useEffect(() => {
         ReactGA.send({hitType: "pageview", page: window.location.pathname + window.location.search, title: 'Blog Page'})
    }, [])
+   useEffect(()=> {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
+}, [])
+
     const [darkMode, setDarkMode] = useState(false)
     let backgroundd = 'light'
     if (darkMode) {
@@ -21,9 +26,10 @@ const Blog = ()=>{
     } else {backgroundd = 'light'}
     return(
         <div className={backgroundd}> 
-            <Navbar darkMode={darkMode} setDarkMode={setDarkMode}/> 
-            <CarouselSlide darkMode={darkMode} />
-            <Slider darkMode= {darkMode}/>
+            <Navbar darkMode={darkMode} setDarkMode={setDarkMode}/>
+            <BlogHeader darkMode={darkMode} />
+            {/* <CarouselSlide darkMode={darkMode} /> */}
+            {/* <Slider darkMode= {darkMode}/> */}
 
             <Blogs darkMode={darkMode}/>
             <div className="create-blogpost1">

@@ -1,3 +1,74 @@
+
+.crea {
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 6.5px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 10px;
+    background: linear-gradient(214deg, #F1765F 0%, #1478E5 100%);
+    padding: 6px;
+}
+.listen {
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 6.5px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 10px;
+    background: rgba(31, 31, 31, 0.40);
+    padding: 6px;
+}
+.listen-dark {
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 6.5px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 10px;
+    background: rgba(108, 107, 107, 0.40);
+    padding: 6px;
+}
+.copied-notif {
+    margin-top: -50px;
+    font-size: 13px;
+    font-family: 'Poppins';
+    color: #1F1F1F99;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+
+}
+.copied-notif-dark {
+    margin-top: -50px;
+    font-size: 13px;
+    font-family: 'Poppins';
+    color: #F1765F;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+}
+
+.copied-notif1 {
+    
+    font-size: 13px;
+    font-family: 'Poppins';
+    color: #1F1F1F99;
+
+
+}
+.copied-notif-dark1 {
+
+    font-size: 13px;
+    font-family: 'Poppins';
+    color: #F1765F;
+
+
+}
+
 .post-banner{
     display: flex;
     justify-content: center;
@@ -192,6 +263,40 @@ br{
     list-style-type: decimal;
 }
 
+@media screen and (min-width: 760px) {
+    
+.crea {
+    font-size: 14px;
+}
+.listen {
+    font-size: 14px;
+}
+.listen-dark {
+    font-size: 14px;
+}
+    .copied-notif {
+        margin-top: -40px;
+        font-size: 14px;
+        font-family: 'Poppins';
+        color: #1F1F1F99;
+        margin-right: 25px;
+    }
+    .copied-notif-dark {
+        margin-top: -40px;
+        font-size: 14px;
+        font-family: 'Poppins';
+        color: #F1765F;
+        margin-right: 25px;
+    }
+    .copied-notif1 {
+        font-size: 14px;
+        color: #1F1F1F99;
+    }
+    .copied-notif-dark1 {
+        font-size: 14px;
+        color: #F1765F;
+    }
+}
 @media screen and (min-width:960px) {
     .details{
         padding: 50px;

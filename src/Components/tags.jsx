@@ -2,11 +2,11 @@
 const Tags = [
     {
         id: 9,
-        title: 'All'
+        title: 'View all'
     },
     {
         id: 1,
-        title: 'DAO'
+        title: 'DAO' 
     },
     {
         id: 2,
@@ -27,15 +27,7 @@ const Tags = [
     {
         id: 6,
         title: 'Startup'
-    },
-    {
-        id: 7,
-        title: 'ICT'
-    },
-    {
-        id: 8,
-        title: 'AI'
-    },
+    }
 ]
 
 export default Tags;

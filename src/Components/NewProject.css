@@ -35,12 +35,19 @@
     width: 300px;
     text-align: center;
   }
+  .item-tag p {
+    font-size: 10px;
+    width: 80px;
+  }
   .gradient {
     color: #FFF;
     background: linear-gradient(214deg, #F1765F 0%, #3C80CD 100%);
   }
   .center {
-    margin:-15px auto;
+    margin:0 auto;
+  }
+  .margin-top-mobile {
+    margin-top: -120px;
   }
 
   .promote {
@@ -79,6 +86,16 @@
     padding-bottom: 7px;
     text-align: center;
     cursor: pointer;
+  }
+  @media screen and (min-width: 760px) {
+    .item-tag p {
+      font-size: 20px;
+      width: 150px;
+    }
+    .margin-top-mobile {
+      margin-top: -20px;
+    }
+  
   }
 
   @media screen and (min-width: 1000px) {

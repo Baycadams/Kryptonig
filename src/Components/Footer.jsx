@@ -6,7 +6,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaLinkedin } from 'react
 import './footer.css'
 
 
-const Footer = ({darkMode})=>{
+const Footer = ({darkMode})=>{ 
     return(
         <div>
 
@@ -87,11 +87,6 @@ const Footer = ({darkMode})=>{
                     <ul className='other-ul'>
                         <li className='link-header'>
                             Contact
-                        </li>
-                        <li >
-                            <NavLink className='other-link'>
-                            kryptonig@gmail.com
-                            </NavLink>
                         </li>
                         <div className="social-icons">
                             <a href="https://twitter.com/KryptonigLLC?s=09"> 

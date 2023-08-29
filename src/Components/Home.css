@@ -22,7 +22,13 @@
     flex-wrap: nowrap;
 
 }
-
+.featured-on-flex{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
+    margin-left: 15px;
+    margin-right: 15px
+}
 .unlocking{
     margin-top: 10%;
     color: #1F1F1F;
@@ -814,14 +820,14 @@
 }
 .div {
     width: 70%;
-    height: 97%;
+    height: 70%;
     border-radius: 10px;
     border: 1px solid #F1765F;
     background: rgba(31, 31, 31, 0.10);
 }
 
 .div img {
-    height: 60%;
+    height: 45%;
     width: 80%;
     display: flex;
     margin: 15px auto;
@@ -912,7 +918,7 @@
 .flexxinng h4 {
     color: #1F1F1F;
     font-family: "Poppins";
-    font-size: 10px;
+    font-size: 8px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -922,7 +928,7 @@
 .flexxinng-dark h4 {
     color: #F5F5F5;
     font-family: "Poppins";
-    font-size: 10px;
+    font-size: 8px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -932,7 +938,7 @@
 .flexxinng h2 {
     color: rgba(68, 60, 60, 0.5);
     font-family: "Poppins";
-    font-size: 12px;
+    font-size: 8px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -940,7 +946,7 @@
 .flexxinng-dark h2 {
     color: rgba(245, 245, 245, 0.50);
     font-family: "Poppins";
-    font-size: 12px;
+    font-size: 8px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -1466,30 +1472,14 @@ article iframe{
     color: rgba(245, 245, 245, 0.80);
     text-align: center;
     font-family: "Poppins";
-    font-size: 19px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     width: 75%;
     margin: 0 auto;
 }
-.readMore {
-    border-radius: 10px;
-    background: var(--half-white, rgba(255, 255, 255, 0.50));
-    width: 130px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto;
-    color: #FFF;
-    font-family: "Poppins";
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    cursor: pointer;
-}
+
 .faq {
     padding-top: 200px;
     background: linear-gradient(170deg, rgba(217, 217, 217, 0.00) 0%, rgba(205, 226, 255, 0.33) 31.75%, rgba(172, 209, 255, 0.49) 60.89%, rgba(241, 231, 255, 0.00) 83.64%);
@@ -1694,6 +1684,35 @@ article iframe{
     color: white;
 }
 @media screen and (min-width:760px) {
+    .body-text {
+        font-size: 19px;
+    }
+    .flexxinng h4 {
+        font-size: 12px;
+    }
+    .flexxinng-dark h4 {
+        font-size: 12px;
+    }
+    .flexxinng h2 {
+        font-size:12px;
+    }
+    .flexxinng-dark h2 {
+        font-size: 12px;
+    }
+    .div {
+        width: 70%;
+        height: 97%;
+        border-radius: 10px;
+        border: 1px solid #F1765F;
+        background: rgba(31, 31, 31, 0.10);
+    }
+    .div img {
+        height: 60%;
+        width: 80%;
+        display: flex;
+        margin: 15px auto;
+        justify-content: center;
+    }
     .blockchain-icon {
         margin-top: -30px;
     }

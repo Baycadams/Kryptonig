@@ -23,7 +23,7 @@ const ShowroomHead = ({darkMode}) => {
         <div className="header-flex">
             <div className={darkMode ? 'flex-left-dark' : 'flex-left'}>
                 <h5 className={darkMode ? 'showcase-dark' : 'showcase'}>Showcase Your Genius To The World</h5>
-                <p>Showcase your genius and express your values to a large and secure community of investors and contributors</p>
+                <p >Showcase your genius and express your values to a large and secure community of investors and contributors</p>
                 <h4>Join Showroom</h4>
 
             </div>

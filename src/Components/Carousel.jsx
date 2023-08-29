@@ -43,14 +43,15 @@ const CarouselSlide = ({darkMode}) => {
     return(
        <div style={{marginLeft: "10px", marginBottom: "50px"}}>
 
-          <Carousel responsive={responsive}>
+          
+          {/* <Carousel responsive={responsive}>
             {websiteBlog.map((item) => {
               return <div style={{height: "350px", width: "90%"}} key={item.id}> 
                   <img src={item.imageURL} style={{width: "110%", height: "100%", position: "relative", borderRadius: "30px"}} alt="" />
                   <p className='blog-carousel-title'>{item.title}</p>
                 </div>
               })}
-          </Carousel>
+          </Carousel> */}
                 
        </div>
     )

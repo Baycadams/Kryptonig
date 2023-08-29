@@ -13,6 +13,9 @@ const Nfts = ()=>{
     useEffect(() => {
         ReactGA.send({hitType: "pageview", page: window.location.pathname + window.location.search, title: 'NFT Page'})
    }, [])
+   useEffect(()=> {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
+}, [])
 
     const [darkMode, setDarkMode] = useState(false)
     let backgroundd = 'light'
